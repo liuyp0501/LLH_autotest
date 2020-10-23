@@ -1,0 +1,206 @@
+2016-04-18 15:42:23  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 15:42:23  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><hRet>1</hRet></PSSResp>
+2016-04-18 15:42:23  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410029</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410029</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 15:42:23  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="iSignToday">0</Property><Property name="reSignTimes">0</Property><Property name="pointId">6</Property><Property name="signTimes">1</Property></Params><Results><ResultTotal>42</ResultTotal><Result><Property name="pointName">流量币</Property><Property name="index">1</Property><Property name="pointId">1</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">2</Property><Property name="pointId">2</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">3</Property><Property name="pointId">3</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">4</Property><Property name="pointId">4</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">5</Property><Property name="pointId">5</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">6</Property><Property name="pointId">6</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">7</Property><Property name="pointId">7</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">8</Property><Property name="pointId">8</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">9</Property><Property name="pointId">9</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">10</Property><Property name="pointId">10</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">11</Property><Property name="pointId">11</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">12</Property><Property name="pointId">12</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">13</Property><Property name="pointId">13</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">14</Property><Property name="pointId">14</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">15</Property><Property name="pointId">15</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">16</Property><Property name="pointId">16</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">17</Property><Property name="pointId">17</Property><Property name="productId">15</Property><Property name="pointType">3</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">18</Property><Property name="pointId">18</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">19</Property><Property name="pointId">19</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">20</Property><Property name="pointId">20</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">21</Property><Property name="pointId">21</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">22</Property><Property name="pointId">22</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">23</Property><Property name="pointId">23</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">24</Property><Property name="pointId">24</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">25</Property><Property name="pointId">25</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">100元电子券</Property><Property name="index">26</Property><Property name="pointId">26</Property><Property name="productId">1003</Property><Property name="pointType">2</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">27</Property><Property name="pointId">27</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">28</Property><Property name="pointId">28</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">29</Property><Property name="pointId">29</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">30</Property><Property name="pointId">30</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">31</Property><Property name="pointId">31</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">32</Property><Property name="pointId">32</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">33</Property><Property name="pointId">33</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">34</Property><Property name="pointId">34</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">35</Property><Property name="pointId">35</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">36</Property><Property name="pointId">36</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">37</Property><Property name="pointId">37</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">38</Property><Property name="pointId">38</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">39</Property><Property name="pointId">39</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">40</Property><Property name="pointId">40</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">41</Property><Property name="pointId">41</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">42</Property><Property name="pointId">42</Property><Property name="productId">20</Property><Property name="pointType">0</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="iSignToday">0</Property><Property name="reSignTimes">0</Property><Property name="pointId">6</Property><Property name="signTimes">1</Property></Params><Results><ResultTotal>42</ResultTotal><Result><Property name="pointName">流量币</Property><Property name="index">1</Property><Property name="pointId">1</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">2</Property><Property name="pointId">2</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">3</Property><Property name="pointId">3</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">4</Property><Property name="pointId">4</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">5</Property><Property name="pointId">5</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">6</Property><Property name="pointId">6</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">7</Property><Property name="pointId">7</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">8</Property><Property name="pointId">8</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">9</Property><Property name="pointId">9</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">10</Property><Property name="pointId">10</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">11</Property><Property name="pointId">11</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">12</Property><Property name="pointId">12</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">13</Property><Property name="pointId">13</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">14</Property><Property name="pointId">14</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">15</Property><Property name="pointId">15</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">16</Property><Property name="pointId">16</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">17</Property><Property name="pointId">17</Property><Property name="productId">15</Property><Property name="pointType">3</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">18</Property><Property name="pointId">18</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">19</Property><Property name="pointId">19</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">20</Property><Property name="pointId">20</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">21</Property><Property name="pointId">21</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">22</Property><Property name="pointId">22</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">23</Property><Property name="pointId">23</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">24</Property><Property name="pointId">24</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">25</Property><Property name="pointId">25</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">100元电子券</Property><Property name="index">26</Property><Property name="pointId">26</Property><Property name="productId">1003</Property><Property name="pointType">2</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">27</Property><Property name="pointId">27</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">28</Property><Property name="pointId">28</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">29</Property><Property name="pointId">29</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">30</Property><Property name="pointId">30</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">31</Property><Property name="pointId">31</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">32</Property><Property name="pointId">32</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">33</Property><Property name="pointId">33</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">34</Property><Property name="pointId">34</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">35</Property><Property name="pointId">35</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">36</Property><Property name="pointId">36</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">37</Property><Property name="pointId">37</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">38</Property><Property name="pointId">38</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">39</Property><Property name="pointId">39</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">40</Property><Property name="pointId">40</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">41</Property><Property name="pointId">41</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">42</Property><Property name="pointId">42</Property><Property name="productId">20</Property><Property name="pointType">0</Property></Result></Results></PSSResp>
+2016-04-18 15:42:23  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 15:42:23  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-18 15:42:23  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 15:42:24  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>signMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="signId">239712</Property><Property name="newPointId">6</Property><Property name="signNumber">6</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="pointMsg">彩印0元包</Property><Property name="pointId">2</Property><Property name="credit">5</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="signId">239712</Property><Property name="pointMsg">流量币</Property><Property name="pointId">6</Property><Property name="credit">3.0</Property><Property name="pointType">0</Property><Property name="productId">3</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>signMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="signId">239712</Property><Property name="newPointId">6</Property><Property name="signNumber">6</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="pointMsg">彩印0元包</Property><Property name="pointId">2</Property><Property name="credit">5</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="signId">239712</Property><Property name="pointMsg">流量币</Property><Property name="pointId">6</Property><Property name="credit">3.0</Property><Property name="pointType">0</Property><Property name="productId">3</Property></Result></Results></PSSResp>
+2016-04-18 15:42:24  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 15:42:24  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30007</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30007</hRet></PSSResp>

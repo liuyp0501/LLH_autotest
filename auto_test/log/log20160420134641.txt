@@ -1,0 +1,2 @@
+2016-04-20 13:46:41  [u'queryMonthGameActWinScratch', u'1', '', u'30010', u'0', u'必填参数不传', '', '', '', '', '', '30010', 0, 'sucessful']
+2016-04-20 13:46:41  [u'queryMonthGameActWinScratch', u'1', u'13475417476', u'0', u'1', '', '', '', '', '', '', '0', 1, 'sucessful']

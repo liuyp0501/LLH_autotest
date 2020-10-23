@@ -1,0 +1,176 @@
+2016-09-08 17:50:04  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475414444</Property> 
+<Property name="inviteCode"></Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475414444</Property> 
+<Property name="inviteCode"></Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+2016-09-08 17:50:04  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeLogin</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="loginToken">14733256861562241817</Property><Property name="nickName"></Property><Property name="inviteCode">005U4D</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeLogin</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="loginToken">14733256861562241817</Property><Property name="nickName"></Property><Property name="inviteCode">005U4D</Property></Result></Results></PSSResp>
+2016-09-08 17:50:04  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="inviteCode">123456</Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="inviteCode">123456</Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+2016-09-08 17:50:05  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeLogin</FunCode><hRet>40001</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeLogin</FunCode><hRet>40001</hRet></PSSResp>
+2016-09-08 17:50:05  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475414444</Property> 
+<Property name="inviteCode"></Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475414444</Property> 
+<Property name="inviteCode"></Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+2016-09-08 17:50:05  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeLogin</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="loginToken">14733256862871139300</Property><Property name="nickName"></Property><Property name="inviteCode">005U4D</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeLogin</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="loginToken">14733256862871139300</Property><Property name="nickName"></Property><Property name="inviteCode">005U4D</Property></Result></Results></PSSResp>
+2016-09-08 17:50:05  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">134754144</Property> 
+<Property name="inviteCode"></Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeLogin</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">134754144</Property> 
+<Property name="inviteCode"></Property> 
+<Property name="type"></Property> 
+</Params>
+</PSSReq>
+
+2016-09-08 17:50:05  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeLogin</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="loginToken">14733256863437818187</Property><Property name="nickName"></Property><Property name="inviteCode">04E8R4</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeLogin</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="loginToken">14733256863437818187</Property><Property name="nickName"></Property><Property name="inviteCode">04E8R4</Property></Result></Results></PSSResp>

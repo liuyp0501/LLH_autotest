@@ -1,0 +1,264 @@
+2016-01-26 17:31:56  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">10</Property> 
+<Property name="times">10</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">10</Property> 
+<Property name="times">10</Property> 
+</Params>
+</PSSReq>
+
+2016-01-26 17:31:56  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+2016-01-26 17:31:56  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">100</Property> 
+<Property name="times">100</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">100</Property> 
+<Property name="times">100</Property> 
+</Params>
+</PSSReq>
+
+2016-01-26 17:31:56  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+2016-01-26 17:31:56  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">200</Property> 
+<Property name="times">200</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">200</Property> 
+<Property name="times">200</Property> 
+</Params>
+</PSSReq>
+
+2016-01-26 17:31:56  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+2016-01-26 17:31:56  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">1</Property> 
+<Property name="times">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="consumeCredit">1</Property> 
+<Property name="times">1</Property> 
+</Params>
+</PSSReq>
+
+2016-01-26 17:31:56  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>10008</hRet></PSSResp>
+2016-01-26 17:31:56  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417473</Property> 
+<Property name="consumeCredit">100</Property> 
+<Property name="times">100</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417473</Property> 
+<Property name="consumeCredit">100</Property> 
+<Property name="times">100</Property> 
+</Params>
+</PSSReq>
+
+2016-01-26 17:31:56  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>67003</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>67003</hRet></PSSResp>
+2016-01-26 17:31:56  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="consumeCredit">100</Property> 
+<Property name="times">100</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>tigerDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="consumeCredit">100</Property> 
+<Property name="times">100</Property> 
+</Params>
+</PSSReq>
+
+2016-01-26 17:31:56  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>67003</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>tigerDraw</FunCode><hRet>67003</hRet></PSSResp>

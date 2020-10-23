@@ -1,0 +1,176 @@
+2016-08-16 17:00:58  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode">80000000462</Property> 
+<Property name="page_number">10</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode">80000000462</Property> 
+<Property name="page_number">10</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 17:00:59  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="img_url">a.png</Property><Property name="activity_id">980000000462</Property><Property name="location">L</Property><Property name="activity_desc">1.活动时间：即日起至2016年8月22日；2.活动仅限内蒙古移动用户参与；3.竞猜1注需支付10流量币，每场竞猜您最多可投20注，可分别用于投注是和否选项；</Property><Property name="activity_name">奥运竞猜3</Property><Property name="activity_code">80000000462</Property></Params><Results><ResultTotal>1</ResultTotal><Result><Property name="guess_id">215</Property><Property name="guess_start_time">20160815181011</Property><Property name="guess_title">里约奥运首金竞猜00</Property><Property name="guess_end_time">20170812181010</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="img_url">a.png</Property><Property name="activity_id">980000000462</Property><Property name="location">L</Property><Property name="activity_desc">1.活动时间：即日起至2016年8月22日；2.活动仅限内蒙古移动用户参与；3.竞猜1注需支付10流量币，每场竞猜您最多可投20注，可分别用于投注是和否选项；</Property><Property name="activity_name">奥运竞猜3</Property><Property name="activity_code">80000000462</Property></Params><Results><ResultTotal>1</ResultTotal><Result><Property name="guess_id">215</Property><Property name="guess_start_time">20160815181011</Property><Property name="guess_title">里约奥运首金竞猜00</Property><Property name="guess_end_time">20170812181010</Property></Result></Results></PSSResp>
+2016-08-16 17:00:59  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode"></Property> 
+<Property name="page_number">10</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode"></Property> 
+<Property name="page_number">10</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 17:00:59  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><hRet>30010</hRet></PSSResp>
+2016-08-16 17:00:59  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode">80000000462</Property> 
+<Property name="page_number">5</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode">80000000462</Property> 
+<Property name="page_number">5</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 17:00:59  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="img_url">a.png</Property><Property name="activity_id">980000000462</Property><Property name="location">L</Property><Property name="activity_desc">1.活动时间：即日起至2016年8月22日；2.活动仅限内蒙古移动用户参与；3.竞猜1注需支付10流量币，每场竞猜您最多可投20注，可分别用于投注是和否选项；</Property><Property name="activity_name">奥运竞猜3</Property><Property name="activity_code">80000000462</Property></Params><Results><ResultTotal>1</ResultTotal><Result><Property name="guess_id">215</Property><Property name="guess_start_time">20160815181011</Property><Property name="guess_title">里约奥运首金竞猜00</Property><Property name="guess_end_time">20170812181010</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="img_url">a.png</Property><Property name="activity_id">980000000462</Property><Property name="location">L</Property><Property name="activity_desc">1.活动时间：即日起至2016年8月22日；2.活动仅限内蒙古移动用户参与；3.竞猜1注需支付10流量币，每场竞猜您最多可投20注，可分别用于投注是和否选项；</Property><Property name="activity_name">奥运竞猜3</Property><Property name="activity_code">80000000462</Property></Params><Results><ResultTotal>1</ResultTotal><Result><Property name="guess_id">215</Property><Property name="guess_start_time">20160815181011</Property><Property name="guess_title">里约奥运首金竞猜00</Property><Property name="guess_end_time">20170812181010</Property></Result></Results></PSSResp>
+2016-08-16 17:00:59  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode">80000000462</Property> 
+<Property name="page_number">5</Property> 
+<Property name="current_page">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryGuessActivity</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activityCode">80000000462</Property> 
+<Property name="page_number">5</Property> 
+<Property name="current_page">0</Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 17:00:59  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryGuessActivity</FunCode><hRet>1</hRet></PSSResp>

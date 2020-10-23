@@ -1,0 +1,5 @@
+2016-04-18 15:41:09  [u'querySignMonopolyService', u'1', '', u'1', u'0', u'必填参数置空', '', '', '', '', '', '1', 0, 'sucessful']
+2016-04-18 15:41:09  [u'querySignMonopolyService', u'1', u'13475410029', u'0', u'0', '', '', '', '', '', '', '0', 42, 'sucessful']
+2016-04-18 15:41:10  [u'signMonopolyService', u'2', '', u'0', u'30010', u'0', '', '', '', '', '', '30010', 0, 'sucessful']
+2016-04-18 15:41:10  [u'signMonopolyService', u'2', u'13475410034', u'0', u'0', u'0', '', '', '', '', '', '0', 2, 'sucessful']
+2016-04-18 15:41:10  [u'signMonopolyService', u'2', u'13475410034', u'0', u'30007', u'0', '', '', '', '', '', '30007', 0, 'sucessful']

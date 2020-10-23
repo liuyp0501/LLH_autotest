@@ -1,0 +1,406 @@
+# coding=gbk 
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
+from SocketServer import ThreadingMixIn
+from xlutils.copy import copy
+import xml.dom.minidom
+import string,httplib,urllib,sys,time,datetime
+import threading
+import MySQLdb
+import os
+import xlrd
+import xlwt
+import time
+
+
+ss_url  = "/pss/oss.aspire"
+css_host ='10.12.3.201:36666'  
+#logfile = 'D:\WORK\lljzdh\log.txt'
+logdir ='D:\auto_test\project\log'
+basedir='D:\auto_test\project'
+tempdir='D:\auto_test\project\template'
+#logdetailfile = r'D:\WORK\lljzdh\logdetail.txt'
+Failed_Count = 0
+Succed_Count = 0
+
+
+
+
+def initdata(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        user='hub_pss',
+        passwd='hub_pss',
+        db ='hub_pss',
+        client_flag=6
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    #print str
+    cur.execute(paras[0])
+    cur.close()
+    conn.commit()
+    conn.close()
+    return 0
+
+def checkdata(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        user='hub_pss',
+        passwd='hub_pss',
+        db ='hub_pss'
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    cur.execute(paras[0])
+    rs =cur.fetchall()
+    indx1=str(rs).find('(')
+    indx2=str(rs).find(',)')
+    rs1=str(rs)[indx1+1:indx2]
+    rs1=rs1.replace('Decimal', '')
+    dict=eval(rs1)
+    if float(dict['result'])==float(paras[1]):
+        return 0
+    else:
+        return 1
+    cur.close()
+    conn.commit()
+    conn.close()    
+    
+def log(str):
+    filestr = open(logfile, 'a+' ) 
+    starttime=time.time()
+    filestr.write(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(starttime))+'  '+'  '.join(str))
+    filestr.write('\n')
+    filestr.close()
+    
+    
+def logdetail(str):
+    filestr = open(logdetailfile, 'a+' ) 
+    starttime=time.time()
+    filestr.write(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(starttime)))
+    filestr.write('\n')
+    filestr.write(str)
+    filestr.write('\n')
+    filestr.close()
+    
+def driver( xlsfile, sheetname,index):
+    xls = xlrd.open_workbook( xlsfile, formatting_info=True )
+    sheet = xls.sheet_by_name(sheetname)
+    newWb = copy(xls);
+    ws = newWb.get_sheet(int(index));
+    
+    ret=10
+    
+    font0= xlwt.Font()
+    font0.name= 'Times New Roman'
+    font0.colour_index= 3
+    font0.bold= True
+    style0= xlwt.XFStyle()
+    style0.font= font0
+    
+    font1= xlwt.Font()
+    font1.name= 'Times New Roman'
+    font1.colour_index= 2
+    font1.bold= True
+    style1= xlwt.XFStyle()
+    style1.font= font1
+    
+    #create db conn
+    
+    print sheetname
+    
+    for li in range( 1, sheet.nrows ):
+        name = sheet.cell( li, 0 ).value
+        paras=['']*10
+        paras[0]=sheet.cell( li, 2 ).value
+        paras[1]=sheet.cell( li, 3 ).value
+        paras[2]=sheet.cell( li, 4 ).value
+        paras[3]=sheet.cell( li, 5 ).value
+        paras[4]=sheet.cell( li, 6 ).value
+        paras[5]=sheet.cell( li, 7 ).value
+        paras[6]=sheet.cell( li, 8 ).value
+        if  name=='shakeDraw':
+            ret=shakeDraw(paras)
+        elif name=='tigerDraw':
+            ret=tigerDraw(paras)
+        elif name=='queryUserAcct':
+            ret=queryUserAcct(paras)
+        elif name=='queryUserAcctDetails':
+            ret=queryUserAcctDetails(paras)
+        elif name=='companyRegister':
+            ret=companyRegister(paras)
+        elif name=='companyCancel':
+            ret=companyCancel(paras)
+        elif name=='checkdata':
+            ret=checkdata(paras)
+        elif name=='initdata':
+            ret=initdata(paras) 
+            
+        if  ret==0:
+           ws.write(li, 1, 'OK',style0)
+        elif ret==1:
+           ws.write(li, 1, 'FAIL',style1) 
+        ret=10   
+             
+    #newWb.save(xlsfile)
+    return
+
+def companyCancel(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{company_code}', paras[1])
+    body=body.replace('{company_name}', paras[2])
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='companyCancel'
+    if rtncode==paras[3]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print paras
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print paras
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+
+def companyRegister(paras):
+    global Succed_Count
+    global Failed_Count
+
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{company_name}', paras[1])
+    body=body.replace('{city_name}', paras[2])
+    body=body.replace('{settle_mode}', paras[3])
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='companyRegister'
+    if rtncode==paras[4]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print paras
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print paras
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def queryUserAcctDetails(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}', paras[1])
+    body=body.replace('{account_no}', paras[2])
+    body=body.replace('{account_period}', paras[3])
+    body=body.replace('{page_number}', paras[4])
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    indx1=response.find('<ResultTotal>')
+    indx2=response.find('</ResultTotal>')
+    if indx1==-1:
+        total=0
+    else:
+        total=response[indx1+13:indx2]
+    paras[0]='queryUserAcctDetailst'
+    if (rtncode==paras[5])&(int(total)==int(paras[6])):
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print paras
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print paras
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def queryUserAcct(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    logdetail('the request is:%s'%body.replace('{msisdn}', paras[1]))
+    client.request("POST", ss_url, body.replace('{msisdn}', paras[1]))
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='queryUserAcct'
+   
+    if rtncode==paras[2]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print paras
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print paras
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def shakeDraw(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    #phonestr = open(parasfile, 'r' ).readlines() 
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    logdetail('the request is:%s'%body.replace('{msisdn}', paras[1]).replace('{othersMsisdn}', paras[2]))
+    client.request("POST", ss_url, body.replace('{msisdn}', paras[1]).replace('{othersMsisdn}', paras[2]))
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='shakeDraw'
+    if rtncode==paras[3]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print paras
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print paras
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def tigerDraw(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    #phonestr = open(parasfile, 'r' ).readlines() 
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    logdetail('the request is:%s'%body.replace('{msisdn}', paras[1]).replace('{consumeCredit}', paras[2]).replace('{times}', paras[3]))
+    client.request("POST", ss_url, body.replace('{msisdn}', paras[1]).replace('{consumeCredit}', paras[2]).replace('{times}', paras[3]))
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='tigerDraw'
+    if rtncode==paras[4]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print paras
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print paras
+        Failed_Count+=1
+        log(paras)
+        return  1
+    client.close() 
+     
+    
+def zdh():
+    #print 'input start'
+    casefile = basedir+'\\testdata.xls'
+    xls = xlrd.open_workbook(casefile)
+    sheet = xls.sheet_by_name('Total')
+  
+
+    for li in range( 1, sheet.nrows ):
+        
+        flag = sheet.cell( li, 1 ).value
+        interface=sheet.cell( li, 0 ).value
+        index =sheet.cell( li, 2).value
+        if  flag=='Y':
+            driver(casefile,interface,index)
+            #print 'NOT RUN'  
+
+    print 'The toal case is:%d,The succed case is:%d,The failed case is:%d' %(Failed_Count+Succed_Count,Succed_Count,Failed_Count)
+     
+    return
+        
+    
+if __name__ == "__main__":  
+  
+    #log file
+    starttime=time.time()
+    logfile = basedir+'\\log'+'\\log'+time.strftime('%Y%m%d%H%M%S',time.localtime(starttime))+'.txt'
+    logdetailfile = logdir+'\\log'+'logdetail'+time.strftime('%Y%m%d%H%M%S',time.localtime(starttime))+'.txt'
+
+
+    
+    #execute process
+    zdh();
+    
+    #close db conn
+    
+    sys.exit()
+    

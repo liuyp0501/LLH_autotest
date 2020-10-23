@@ -1,0 +1,216 @@
+2016-08-16 16:45:53  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">10</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">10</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId"></Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 16:45:53  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addUserGuess</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addUserGuess</FunCode><hRet>30010</hRet></PSSResp>
+2016-08-16 16:45:53  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">10</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId">980000000462</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">10</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId">980000000462</Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 16:45:53  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addUserGuess</FunCode><hRet>10007</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addUserGuess</FunCode><hRet>10007</hRet></PSSResp>
+2016-08-16 16:45:53  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">10</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId">980000000462</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">10</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId">980000000462</Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 16:45:53  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addUserGuess</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addUserGuess</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-08-16 16:45:53  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">13</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId">980000000462</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addUserGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410009</Property> 
+<Property name="credit">10</Property> 
+<Property name="input">1</Property> 
+<Property name="totalCredit">13</Property> 
+<Property name="optionId">516</Property> 
+<Property name="optionValue">1</Property> 
+<Property name="guessId">215</Property> 
+<Property name="activityId">980000000462</Property> 
+</Params>
+</PSSReq>
+
+2016-08-16 16:45:54  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addUserGuess</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addUserGuess</FunCode><hRet>30010</hRet></PSSResp>

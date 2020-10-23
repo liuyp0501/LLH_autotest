@@ -1,0 +1,284 @@
+#_*_ coding:utf-8 _*_
+
+from BaseHTTPServer import HTTPServer,BaseHTTPRequestHandler
+from SocketServer import ThreadingMixIn
+from xlutils.copy import copy
+import xml.dom.minidom
+import string,httplib,urllib,sys,time,datetime
+import threading
+import MySQLdb
+import os
+import xlrd
+import xlwt
+import webbrowser
+
+
+ss_url  = "/pss/oss.aspire"
+css_host ='10.12.3.201:36666'  
+css_host_gd='10.12.3.201:48888'
+#logfile = 'D:\WORK\lljzdh\log.txt'
+logdir ='D:\\autotest\\log'
+basedir='D:\\autotest'
+tempdir='D:\\autotest\\template'
+#logdetailfile = r'D:\WORK\lljzdh\logdetail.txt'
+Failed_Count = 0
+Succed_Count = 0
+
+def initdata(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        charset='utf8',
+        user='hub_pss',
+        passwd='hub_pss',
+        db ='hub_pss',
+        client_flag=6
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    #print str
+   
+    cur.execute(str(paras[0]).encode('utf8'))
+    cur.close()
+    conn.commit()
+    conn.close()
+    print "*------ִ��initdata�ű�-----------*"
+    return 0
+
+def initdata_gd(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        charset='utf8',
+        user='testpss',
+        passwd='testpss',
+        db ='gdpss',
+        client_flag=6
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    cur.execute(str(paras[0]).encode('utf8'))
+    
+    cur.close()
+    conn.commit()
+    conn.close()
+    print "*------ִ��initdata_gd�ű�-----------*"
+    return 0
+
+def fresh_mem(paras):
+    url=paras[0]
+    webbrowser.open(url, new=0, autoraise=True)
+    #time.sleep(1)
+    #os.system("TASKKILL/F /IM chrome.exe") #̫�ֱ��Ĺر��������ʽ
+    
+    
+def checkdata(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        charset='utf8',
+        user='hub_pss',
+        passwd='hub_pss',
+        db ='hub_pss'
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    cur.execute(paras[0])
+    rs =cur.fetchall()
+    indx1=str(rs).find('(')
+    indx2=str(rs).find(',)')
+    rs1=str(rs)[indx1+1:indx2]
+    rs1=rs1.replace('Decimal', '')
+    rs1=rs1.replace('None','0')
+    #dict=eval(rs1)
+    #if float(dict['result'])==float(paras[1]):
+    #   return 0
+    rs1=str(rs1)
+    #dict=eval(rs1)
+    #dict=dict['result']
+    dict1=eval(rs1)['result']
+    print float(dict1)
+    print float(paras[1])
+    print float(dict1)==float(paras[1])
+    print "True ��ʾ��������������ȷ��Flase��ʾ���ݴ���"
+    if float(dict1)==float(paras[1]):
+#   if str(dict)==str(paras[1]):
+        return 0    
+    else:
+        return 1
+
+    cur.close()
+    conn.commit()
+    conn.close()  
+    
+def log(str1):
+    filestr = open(logfile, 'a+' ) 
+    starttime=time.time()
+    #if type(str1) == type([]):
+    #    str1 = [str(li) for li in str1]
+    #log_str = '  '.join(str1)
+    #print type(log_str),log_str.encode
+  
+    filestr.write(time.strftime(u'%Y-%m-%d %H:%M:%S',time.localtime(starttime))+'  '+str(str1))
+    filestr.write('\n')
+    filestr.close()
+    
+    
+def logdetail(str2):
+    filestr = open(logdetailfile, 'a+' ) 
+    starttime=time.time()
+    filestr.write(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(starttime))+'  '+str(str2))
+    filestr.write('\n')
+    filestr.write(str2)
+    filestr.write('\n')
+    filestr.close()      
+
+def driver( xlsfile, sheetname,index):
+    xls = xlrd.open_workbook( xlsfile, formatting_info=True )
+    sheet = xls.sheet_by_name(sheetname)
+    newWb = copy(xls);
+    ws = newWb.get_sheet(int(index));
+    
+    ret=10
+    
+    font0= xlwt.Font()
+    font0.name= 'Times New Roman'
+    font0.colour_index= 3
+    font0.bold= True
+    style0= xlwt.XFStyle()
+    style0.font= font0
+    
+    font1= xlwt.Font()
+    font1.name= 'Times New Roman'
+    font1.colour_index= 2
+    font1.bold= True
+    style1= xlwt.XFStyle()
+    style1.font= font1
+    
+    #create db conn
+    
+    print sheetname
+    
+    for li in range( 1, sheet.nrows ):
+        name = sheet.cell( li, 0 ).value
+        paras=['']*10
+        paras[0]=sheet.cell( li, 2 ).value
+        paras[1]=sheet.cell( li, 3 ).value
+        paras[2]=sheet.cell( li, 4 ).value
+        paras[3]=sheet.cell( li, 5 ).value
+        paras[4]=sheet.cell( li, 6 ).value
+        paras[5]=sheet.cell( li, 7 ).value
+        paras[6]=sheet.cell( li, 8 ).value
+        paras[7]=sheet.cell( li, 9 ).value
+        paras[8]=sheet.cell( li, 10).value
+        paras[9]=sheet.cell( li, 11).value
+        if  name=='userCreditChange':
+            ret=userCreditChange(paras)
+        elif name=='checkdata':
+            ret=checkdata(paras)
+        elif name=='initdata':
+            ret=initdata(paras)
+        elif name=='initdata_gd':
+            ret=initdata_gd(paras)
+        elif name=='fresh_mem':
+            ret=fresh_mem(paras)
+       
+        if  ret==0:
+            ws.write(li, 1, 'OK',style0)
+        elif ret==1:
+            ws.write(li, 1, 'FAIL',style1) 
+        ret=10 
+             
+    #newWb.save(xlsfile)
+    return
+
+def userCreditChange(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{fMsisdn}',paras[1])
+    body=body.replace('{credit}',paras[2])
+    body=body.replace('{type}',paras[3])
+    body=body.replace('{operTypeID}',paras[4])
+    body=body.replace('{transactionID}',paras[5])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='userCreditChange'
+    if (rtncode==paras[6])&(int(total)==int(paras[7])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(str(paras).decode('raw_unicode_escape'))
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(str(paras).decode('raw_unicode_escape'))
+        return 1
+    return 
+    client.close()
+
+
+def zdh():
+    print 'input start'
+    casefile = basedir+'\\testdata.xls'
+    print casefile
+    xls = xlrd.open_workbook(casefile)
+
+    sheet = xls.sheet_by_name('Total')
+  
+
+    for li in range( 1, sheet.nrows ):
+        
+        flag = sheet.cell( li, 1 ).value
+        interface=sheet.cell( li, 0 ).value
+        index =sheet.cell( li, 2).value
+        if  flag=='Y':
+            driver(casefile,interface,index)
+            #print 'NOT RUN'  
+
+    print 'The toal case is:%d,The succed case is:%d,The failed case is:%d' %(Failed_Count+Succed_Count,Succed_Count,Failed_Count)
+     
+    return
+
+
+if __name__ == "__main__":
+    #log file
+    starttime=time.time()
+    print time.strftime('%Y%m%d%H%M%S',time.localtime(starttime))
+    logfile = basedir+'\\log'+'\\log'+time.strftime('%Y%m%d%H%M%S',time.localtime(starttime))+'.txt'
+    logdetailfile = logdir+'\\logdetail'+time.strftime('%Y%m%d%H%M%S',time.localtime(starttime))+'.txt'
+
+    
+    
+    #execute process
+    zdh();
+    
+    #close db conn
+
+    sys.exit()
+    

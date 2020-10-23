@@ -1,0 +1,132 @@
+2016-04-18 18:12:26  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId"></Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId"></Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 18:12:26  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-18 18:12:26  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 18:12:26  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>
+2016-04-18 18:12:26  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 18:12:26  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>

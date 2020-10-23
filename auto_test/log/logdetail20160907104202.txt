@@ -1,0 +1,400 @@
+2016-09-07 10:42:03  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_name":"竞猜",
+"type":"1",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜",
+"guess_start_time":"20180812181010",
+"guess_end_time":"20190812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"},{"option_desc":"否1","option_value":"3"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_name":"竞猜",
+"type":"1",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜",
+"guess_start_time":"20180812181010",
+"guess_end_time":"20190812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"},{"option_desc":"否1","option_value":"3"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+2016-09-07 10:42:03  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="activity_code">80000000462</Property></Params><Results><ResultTotal>1</ResultTotal><Result><Property name="guess_id">231</Property><Property name="guess_title">奥运竞猜</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="activity_code">80000000462</Property></Params><Results><ResultTotal>1</ResultTotal><Result><Property name="guess_id">231</Property><Property name="guess_title">奥运竞猜</Property></Result></Results></PSSResp>
+2016-09-07 10:42:03  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail"></Property> 
+</Params>
+</PSSReq>
+
+2016-09-07 10:42:03  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><hRet>30010</hRet></PSSResp>
+2016-09-07 10:42:03  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">9</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"1",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">9</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"1",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+2016-09-07 10:42:03  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><hRet>66000</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><hRet>66000</hRet></PSSResp>
+2016-09-07 10:42:03  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"2",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"2",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+2016-09-07 10:42:03  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-09-07 10:42:03  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"3",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"3",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+2016-09-07 10:42:03  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-09-07 10:42:03  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"3",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>addOrUpdateCompanyGuess</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="activity_code">80000000462</Property> 
+<Property name="guess_detail">{
+"guess_detail":
+{
+
+"guess_id":"215",
+"guess_name":"竞猜",
+"type":"3",
+"credit":"10",
+"max_input":"20",
+"guess_title":"奥运竞猜133",
+"guess_start_time":"20190812181010",
+"guess_end_time":"20200812181010",
+"options_detail":[{"option_desc":"是","option_value":"1"},{"option_desc":"否","option_value":"2"}]
+}
+}
+</Property> 
+</Params>
+</PSSReq>
+
+2016-09-07 10:42:03  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>92003</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>addOrUpdateCompanyGuess</FunCode><Operate></Operate><hRet>92003</hRet></PSSResp>

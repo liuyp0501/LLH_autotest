@@ -1,0 +1,132 @@
+2016-04-18 16:27:08  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 16:27:08  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryExcDetails</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryExcDetails</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-18 16:27:08  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 16:27:08  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-18 16:27:08  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 16:27:08  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>3</ResultTotal><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">100</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">101</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:10</Property><Property name="crExcHistID">99</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>3</ResultTotal><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">100</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">101</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:10</Property><Property name="crExcHistID">99</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result></Results></PSSResp>

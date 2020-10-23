@@ -1,0 +1,2 @@
+2016-04-20 14:35:35  [u'userCreditChange', u'5', '', u'21', u'prePay', u'USER_CONSUM', u'20151102121212', u'30010', u'0', u'必填参数不传', '', '1', 0, 'failed']
+2016-04-20 14:35:35  [u'userCreditChange', u'5', u'13475417474', u'21', u'prePay', u'USER_CONSUM', u'20151102121212', u'0', u'0', '', '', '0', 0, 'sucessful']

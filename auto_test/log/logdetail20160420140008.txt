@@ -1,0 +1,1946 @@
+2016-04-20 14:00:08  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>userCreditChange</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="fMsisdn"></Property> 
+<Property name="credit">21</Property> 
+<Property name="type">prePay</Property> 
+<Property name="operTypeID">USER_CONSUM</Property> 
+<Property name="transactionID">20151102121212</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>userCreditChange</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="fMsisdn"></Property> 
+<Property name="credit">21</Property> 
+<Property name="type">prePay</Property> 
+<Property name="operTypeID">USER_CONSUM</Property> 
+<Property name="transactionID">20151102121212</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:00:09  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>userCreditChange</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>userCreditChange</FunCode><hRet>1</hRet></PSSResp>
+2016-04-20 14:00:09  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>userCreditChange</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="fMsisdn">13475417474</Property> 
+<Property name="credit">21</Property> 
+<Property name="type">prePay</Property> 
+<Property name="operTypeID">USER_CONSUM</Property> 
+<Property name="transactionID">20151102121212</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>userCreditChange</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="fMsisdn">13475417474</Property> 
+<Property name="credit">21</Property> 
+<Property name="type">prePay</Property> 
+<Property name="operTypeID">USER_CONSUM</Property> 
+<Property name="transactionID">20151102121212</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:00:09  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>userCreditChange</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="transactionID">14611307910752111026</Property></Params></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>userCreditChange</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="transactionID">14611307910752111026</Property></Params></PSSResp>
+2016-04-20 14:00:09  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryPersonCreditExchangeResult</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="start_time">20141218093357</Property> 
+<Property name="end_time">20161218093504</Property> 
+<Property name="page_number">10</Property> 
+<Property name="order_type">down</Property> 
+<Property name="start_id">1</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryPersonCreditExchangeResult</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="start_time">20141218093357</Property> 
+<Property name="end_time">20161218093504</Property> 
+<Property name="page_number">10</Property> 
+<Property name="order_type">down</Property> 
+<Property name="start_id">1</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:00:09  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryPersonCreditExchangeResult</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryPersonCreditExchangeResult</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:00:09  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryPersonCreditExchangeResult</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="start_time">20141218093357</Property> 
+<Property name="end_time">20161218093504</Property> 
+<Property name="page_number">10</Property> 
+<Property name="order_type">down</Property> 
+<Property name="start_id">1</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryPersonCreditExchangeResult</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="start_time">20141218093357</Property> 
+<Property name="end_time">20161218093504</Property> 
+<Property name="page_number">10</Property> 
+<Property name="order_type">down</Property> 
+<Property name="start_id">1</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:00:11  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryPersonCreditExchangeResult</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="exchange_list">{"exchange_list":[{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160420135704","activity_name":"","credit":"21.00","business_type":"1","activity_type":"购买红包"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"184.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"16.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"184.00","business_type":"1","activity_type":"众筹预扣"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"16.00","business_type":"1","activity_type":"众筹预扣"},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032406","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032148","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155515","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155514","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155512","activity_name":"","credit":"2.00","business_type":"1","activity_type":""}]}</Property><Property name="total_count">74</Property></Params></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryPersonCreditExchangeResult</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="exchange_list">{"exchange_list":[{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160420135704","activity_name":"","credit":"21.00","business_type":"1","activity_type":"购买红包"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"184.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"16.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"184.00","business_type":"1","activity_type":"众筹预扣"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"16.00","business_type":"1","activity_type":"众筹预扣"},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032406","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032148","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155515","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155514","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155512","activity_name":"","credit":"2.00","business_type":"1","activity_type":""}]}</Property><Property name="total_count">74</Property></Params></PSSResp>
+2016-04-20 14:00:11  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryPersonCreditExchangeResult</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="start_time">20141218093357</Property> 
+<Property name="end_time">20161218093504</Property> 
+<Property name="page_number"></Property> 
+<Property name="order_type">down</Property> 
+<Property name="start_id">1</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryPersonCreditExchangeResult</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417474</Property> 
+<Property name="start_time">20141218093357</Property> 
+<Property name="end_time">20161218093504</Property> 
+<Property name="page_number"></Property> 
+<Property name="order_type">down</Property> 
+<Property name="start_id">1</Property> 
+<Property name="current_page">1</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:00:12  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryPersonCreditExchangeResult</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="exchange_list">{"exchange_list":[{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160420135704","activity_name":"","credit":"21.00","business_type":"1","activity_type":"购买红包"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"184.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"16.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"184.00","business_type":"1","activity_type":"众筹预扣"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"16.00","business_type":"1","activity_type":"众筹预扣"},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032406","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032148","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155515","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155514","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155512","activity_name":"","credit":"2.00","business_type":"1","activity_type":""}]}</Property><Property name="total_count">74</Property></Params></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryPersonCreditExchangeResult</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="exchange_list">{"exchange_list":[{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160420135704","activity_name":"","credit":"21.00","business_type":"1","activity_type":"购买红包"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"184.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418185209","activity_name":"","credit":"16.00","business_type":"0","activity_type":"众筹回退"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"184.00","business_type":"1","activity_type":"众筹预扣"},{"result":"","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160418180258","activity_name":"","credit":"16.00","business_type":"1","activity_type":"众筹预扣"},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032406","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"成功","company_name":"","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160415032148","activity_name":"","credit":"100.00","business_type":"3","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155515","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155514","activity_name":"","credit":"2.00","business_type":"1","activity_type":""},{"result":"","company_name":"13475417473","user_conversion_result":"","msisdn":"13475417474","converstion_time":"20160414155512","activity_name":"","credit":"2.00","business_type":"1","activity_type":""}]}</Property><Property name="total_count">74</Property></Params></PSSResp>
+2016-04-20 14:00:42  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">10086000000</Property> 
+<Property name="content">aad哈</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">10086000000</Property> 
+<Property name="content">aad哈</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:00:42  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>sendSms</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>sendSms</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:00:42  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="content">asf</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="content">asf</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:00:42  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>sendSms</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>sendSms</FunCode><hRet>1</hRet></PSSResp>
+2016-04-20 14:01:13  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">10086000000</Property> 
+<Property name="content">aad哈</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">10086000000</Property> 
+<Property name="content">aad哈</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:13  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>sendSms</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>sendSms</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:01:13  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">10086000000</Property> 
+<Property name="content"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>sendSms</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">10086000000</Property> 
+<Property name="content"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:13  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>sendSms</FunCode><hRet>65000</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>sendSms</FunCode><hRet>65000</hRet></PSSResp>
+2016-04-20 14:01:13  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryTopicSolution</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="omepag"></Property> 
+<Property name="topicType">2</Property> 
+<Property name="activityId">17</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryTopicSolution</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="omepag"></Property> 
+<Property name="topicType">2</Property> 
+<Property name="activityId">17</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:13  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryTopicSolution</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryTopicSolution</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:01:13  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeDrawCount</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="othersMsisdn"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeDrawCount</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="othersMsisdn"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:13  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeDrawCount</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeDrawCount</FunCode><hRet>1</hRet></PSSResp>
+2016-04-20 14:01:13  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeDrawCount</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13027163815</Property> 
+<Property name="othersMsisdn"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeDrawCount</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13027163815</Property> 
+<Property name="othersMsisdn"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:13  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeDrawCount</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeDrawCount</FunCode><hRet>1</hRet></PSSResp>
+2016-04-20 14:01:13  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeDrawCount</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13027163815</Property> 
+<Property name="othersMsisdn">13027163815</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeDrawCount</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13027163815</Property> 
+<Property name="othersMsisdn">13027163815</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:13  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeDrawCount</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="drawCount">2</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeDrawCount</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="drawCount">2</Property></Result></Results></PSSResp>
+2016-04-20 14:01:14  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>activityLabel</FunCode>
+    <Operate></Operate>
+	<Params> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>activityLabel</FunCode>
+    <Operate></Operate>
+	<Params> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:14  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>activityLabel</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>activityLabel</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:01:14  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>activityDetail</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="appId"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>activityDetail</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="appId"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:14  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>activityDetail</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>activityDetail</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:14  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>activityDetail</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="appId">12</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>activityDetail</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="appId">12</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:14  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>activityDetail</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>activityDetail</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:01:14  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appActivityList</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="provinceID"></Property> 
+<Property name="category"></Property> 
+<Property name="sortBy"></Property> 
+<Property name="keyWord"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appActivityList</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="provinceID"></Property> 
+<Property name="category"></Property> 
+<Property name="sortBy"></Property> 
+<Property name="keyWord"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:14  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>appActivityList</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>13</ResultTotal><Result><Property name="appPath">/opt/aspire/product/appdown/app/heyuedu.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">9.31</Property><Property name="isDownload">0</Property><Property name="sort">19</Property><Property name="appId">10010</Property><Property name="personNum">57</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">app_download.jpg</Property><Property name="indexImgUrl">app_download.jpg</Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2016-06-30 00:00:00</Property><Property name="appPackageName">com.ophone.reader.ui</Property><Property name="forwardUrl">asp</Property><Property name="productType">2</Property><Property name="startTime">2014-04-14 00:00:00</Property><Property name="appDesc">省币代售app下载预</Property><Property name="extIconUrl">app_download.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">11010</Property><Property name="status">0</Property><Property name="imgUrl">app_download.jpg</Property><Property name="appName">省币代售app下载预</Property><Property name="ruleValue">10.0</Property><Property name="trySecond"></Property><Property name="isShow">1</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">3</Property><Property name="appId">20022</Property><Property name="personNum">0</Property><Property name="remark"></Property><Property name="iconUrl">migu_read.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://210.75.5.250:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2016-01-01 00:00:00</Property><Property name="appDesc">海量正版资源、精品图书制作、优秀阅读体验、贴心语音服务，让您畅享悦读！</Property><Property name="extIconUrl"></Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">nmxchd</Property><Property name="status">0</Property><Property name="imgUrl">migu_read.png</Property><Property name="appName">咪咕阅读</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/hebao_2.3.1.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">51</Property><Property name="personNum">2468478</Property><Property name="remark"></Property><Property name="iconUrl">lingxi.jpg</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">灵犀，听话的语音小秘书。我的手机，我说了算！</Property><Property name="extIconUrl">lingxi.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">lingxi</Property><Property name="status">0</Property><Property name="imgUrl">lingxi.jpg</Property><Property name="appName">灵犀</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/MM5.0_online_hd_nolog_5410007927.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">12.7</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">52</Property><Property name="personNum">2468480</Property><Property name="remark"></Property><Property name="iconUrl">MM.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">Mobile Market应用商场,让你的手机更精彩！</Property><Property name="extIconUrl">MM.png</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">MM</Property><Property name="status">0</Property><Property name="imgUrl">MM.png</Property><Property name="appName">移动MM应用商场</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/heyuedu.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">9.54</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">53</Property><Property name="personNum">2468478</Property><Property name="remark"></Property><Property name="iconUrl">heshipin.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">“和视频”释放您的视听感官享受，随时随地尽情欣赏影视节目！</Property><Property name="extIconUrl">heshipin.png</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">heshipin</Property><Property name="status">0</Property><Property name="imgUrl">heshipin.png</Property><Property name="appName">和视频</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/hebao_2.3.1.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">4.62</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">56</Property><Property name="personNum">2468487</Property><Property name="remark"></Property><Property name="iconUrl">hebao.jpg</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">为用户提供一种方便快捷、安全时尚的线上、线下支付体验！</Property><Property name="extIconUrl">hebao.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">hebao</Property><Property name="status">0</Property><Property name="imgUrl">hebao.jpg</Property><Property name="appName">和包</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/6d2bf652-00d4-41c4-b392-23283b173a25.1.4_1007_20141204.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.79</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">58</Property><Property name="personNum">2468474</Property><Property name="remark"></Property><Property name="iconUrl">heshenghuo.jpg</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">为广大玩家提供更加丰富的游戏产品和服务！</Property><Property name="extIconUrl">heshenghuo.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">heshenghuo</Property><Property name="status">0</Property><Property name="imgUrl">heshenghuo.jpg</Property><Property name="appName">和生活</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/lingxi_v3.0.1830.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">34</Property><Property name="personNum">2468494</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">taobao.png</Property><Property name="indexImgUrl">taobao.jpg</Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl">asp</Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">随时随地，想淘就淘</Property><Property name="extIconUrl">taobao.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">taobao</Property><Property name="status">0</Property><Property name="imgUrl">taobao.png</Property><Property name="appName">淘宝</Property><Property name="ruleValue">11.11</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/feixin.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">12</Property><Property name="personNum">2468494</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">feixin.png</Property><Property name="indexImgUrl">fiexin.jpg</Property><Property name="downloadUrl">http://120.25.133.65:20873/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl">asp</Property><Property name="productType"></Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">群发祝福，一键搞定</Property><Property name="extIconUrl">feixin.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">feixin</Property><Property name="status">0</Property><Property name="imgUrl">feixin.png</Property><Property name="appName">飞信</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">20023</Property><Property name="personNum">0</Property><Property name="remark"></Property><Property name="iconUrl">heshipin.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://210.75.5.250:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2016-01-01 00:00:00</Property><Property name="appDesc">和视频悦享升级！和视频为你提供在线正版、高清、海量视频内容服务</Property><Property name="extIconUrl"></Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">nmxchd</Property><Property name="status">0</Property><Property name="imgUrl">heshipin.png</Property><Property name="appName">和视频</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">14.9</Property><Property name="isDownload">0</Property><Property name="sort">1</Property><Property name="appId">20160310</Property><Property name="personNum">2</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">hetongxunlu.png</Property><Property name="indexImgUrl">hetongxunlu.png</Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-06-30 17:00:57</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl">asp</Property><Property name="productType">2</Property><Property name="startTime">2014-10-31 00:00:00</Property><Property name="appDesc">手机号码即时同步、一键备份、超强号码库识别陌生来电，实用又贴心！流量币仅限首次下载时赠送。</Property><Property name="extIconUrl">hetongxunlu.png</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">hetongxunlu</Property><Property name="status">0</Property><Property name="imgUrl">hetongxunlu.png</Property><Property name="appName">和通讯录</Property><Property name="ruleValue">10.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">1</Property><Property name="appId">20021</Property><Property name="personNum">0</Property><Property name="remark"></Property><Property name="iconUrl">migu.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://210.75.5.250:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2016-01-01 00:00:00</Property><Property name="appDesc">亮骚的界面、内涵的音乐、量身定制的个性电台、还可用歌单分享你的音乐心情。</Property><Property name="extIconUrl"></Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">nmxchd</Property><Property name="status">0</Property><Property name="imgUrl">migu.png</Property><Property name="appName">咪咕音乐</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/weibo.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">10.0</Property><Property name="isDownload">0</Property><Property name="sort">0</Property><Property name="appId">20160406</Property><Property name="personNum">7</Property><Property name="remark"></Property><Property name="iconUrl"></Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-12-31 10:45:47</Property><Property name="appPackageName">vvm</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2016-04-06 15:08:50</Property><Property name="appDesc">内蒙手机营业厅</Property><Property name="extIconUrl"></Property><Property name="mainActivity">应用主类名</Property><Property name="activityCode">nmwt</Property><Property name="status">0</Property><Property name="imgUrl"></Property><Property name="appName">内蒙手机营业厅</Property><Property name="ruleValue">10.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>appActivityList</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>13</ResultTotal><Result><Property name="appPath">/opt/aspire/product/appdown/app/heyuedu.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">9.31</Property><Property name="isDownload">0</Property><Property name="sort">19</Property><Property name="appId">10010</Property><Property name="personNum">57</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">app_download.jpg</Property><Property name="indexImgUrl">app_download.jpg</Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2016-06-30 00:00:00</Property><Property name="appPackageName">com.ophone.reader.ui</Property><Property name="forwardUrl">asp</Property><Property name="productType">2</Property><Property name="startTime">2014-04-14 00:00:00</Property><Property name="appDesc">省币代售app下载预</Property><Property name="extIconUrl">app_download.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">11010</Property><Property name="status">0</Property><Property name="imgUrl">app_download.jpg</Property><Property name="appName">省币代售app下载预</Property><Property name="ruleValue">10.0</Property><Property name="trySecond"></Property><Property name="isShow">1</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">3</Property><Property name="appId">20022</Property><Property name="personNum">0</Property><Property name="remark"></Property><Property name="iconUrl">migu_read.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://210.75.5.250:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2016-01-01 00:00:00</Property><Property name="appDesc">海量正版资源、精品图书制作、优秀阅读体验、贴心语音服务，让您畅享悦读！</Property><Property name="extIconUrl"></Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">nmxchd</Property><Property name="status">0</Property><Property name="imgUrl">migu_read.png</Property><Property name="appName">咪咕阅读</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/hebao_2.3.1.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">51</Property><Property name="personNum">2468478</Property><Property name="remark"></Property><Property name="iconUrl">lingxi.jpg</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">灵犀，听话的语音小秘书。我的手机，我说了算！</Property><Property name="extIconUrl">lingxi.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">lingxi</Property><Property name="status">0</Property><Property name="imgUrl">lingxi.jpg</Property><Property name="appName">灵犀</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/MM5.0_online_hd_nolog_5410007927.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">12.7</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">52</Property><Property name="personNum">2468480</Property><Property name="remark"></Property><Property name="iconUrl">MM.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">Mobile Market应用商场,让你的手机更精彩！</Property><Property name="extIconUrl">MM.png</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">MM</Property><Property name="status">0</Property><Property name="imgUrl">MM.png</Property><Property name="appName">移动MM应用商场</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/heyuedu.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">9.54</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">53</Property><Property name="personNum">2468478</Property><Property name="remark"></Property><Property name="iconUrl">heshipin.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">“和视频”释放您的视听感官享受，随时随地尽情欣赏影视节目！</Property><Property name="extIconUrl">heshipin.png</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">heshipin</Property><Property name="status">0</Property><Property name="imgUrl">heshipin.png</Property><Property name="appName">和视频</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/hebao_2.3.1.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">4.62</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">56</Property><Property name="personNum">2468487</Property><Property name="remark"></Property><Property name="iconUrl">hebao.jpg</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">为用户提供一种方便快捷、安全时尚的线上、线下支付体验！</Property><Property name="extIconUrl">hebao.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">hebao</Property><Property name="status">0</Property><Property name="imgUrl">hebao.jpg</Property><Property name="appName">和包</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/6d2bf652-00d4-41c4-b392-23283b173a25.1.4_1007_20141204.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.79</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">58</Property><Property name="personNum">2468474</Property><Property name="remark"></Property><Property name="iconUrl">heshenghuo.jpg</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://120.25.134.148:37777/appdownload?appId=#appId#&amp;ch=guangxi&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">为广大玩家提供更加丰富的游戏产品和服务！</Property><Property name="extIconUrl">heshenghuo.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">heshenghuo</Property><Property name="status">0</Property><Property name="imgUrl">heshenghuo.jpg</Property><Property name="appName">和生活</Property><Property name="ruleValue">3.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/lingxi_v3.0.1830.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">34</Property><Property name="personNum">2468494</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">taobao.png</Property><Property name="indexImgUrl">taobao.jpg</Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl">asp</Property><Property name="productType">2</Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">随时随地，想淘就淘</Property><Property name="extIconUrl">taobao.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">taobao</Property><Property name="status">0</Property><Property name="imgUrl">taobao.png</Property><Property name="appName">淘宝</Property><Property name="ruleValue">11.11</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/feixin.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">12</Property><Property name="personNum">2468494</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">feixin.png</Property><Property name="indexImgUrl">fiexin.jpg</Property><Property name="downloadUrl">http://120.25.133.65:20873/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl">asp</Property><Property name="productType"></Property><Property name="startTime">2014-06-01 00:00:00</Property><Property name="appDesc">群发祝福，一键搞定</Property><Property name="extIconUrl">feixin.jpg</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">feixin</Property><Property name="status">0</Property><Property name="imgUrl">feixin.png</Property><Property name="appName">飞信</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">2</Property><Property name="appId">20023</Property><Property name="personNum">0</Property><Property name="remark"></Property><Property name="iconUrl">heshipin.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://210.75.5.250:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2016-01-01 00:00:00</Property><Property name="appDesc">和视频悦享升级！和视频为你提供在线正版、高清、海量视频内容服务</Property><Property name="extIconUrl"></Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">nmxchd</Property><Property name="status">0</Property><Property name="imgUrl">heshipin.png</Property><Property name="appName">和视频</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":0}]}}</Property><Property name="appSize">14.9</Property><Property name="isDownload">0</Property><Property name="sort">1</Property><Property name="appId">20160310</Property><Property name="personNum">2</Property><Property name="remark">下载赠送</Property><Property name="iconUrl">hetongxunlu.png</Property><Property name="indexImgUrl">hetongxunlu.png</Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-06-30 17:00:57</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl">asp</Property><Property name="productType">2</Property><Property name="startTime">2014-10-31 00:00:00</Property><Property name="appDesc">手机号码即时同步、一键备份、超强号码库识别陌生来电，实用又贴心！流量币仅限首次下载时赠送。</Property><Property name="extIconUrl">hetongxunlu.png</Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">hetongxunlu</Property><Property name="status">0</Property><Property name="imgUrl">hetongxunlu.png</Property><Property name="appName">和通讯录</Property><Property name="ruleValue">10.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/migumusic.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">8.09</Property><Property name="isDownload">0</Property><Property name="sort">1</Property><Property name="appId">20021</Property><Property name="personNum">0</Property><Property name="remark"></Property><Property name="iconUrl">migu.png</Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://210.75.5.250:26666/appdownload?appId=#appId#&amp;ch=nmg&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-01-01 00:00:00</Property><Property name="appPackageName">com.whty.wicity.china</Property><Property name="forwardUrl"></Property><Property name="productType"></Property><Property name="startTime">2016-01-01 00:00:00</Property><Property name="appDesc">亮骚的界面、内涵的音乐、量身定制的个性电台、还可用歌单分享你的音乐心情。</Property><Property name="extIconUrl"></Property><Property name="mainActivity">com.whty.wicity.china.home.WicityHomeActivity</Property><Property name="activityCode">nmxchd</Property><Property name="status">0</Property><Property name="imgUrl">migu.png</Property><Property name="appName">咪咕音乐</Property><Property name="ruleValue">0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result><Result><Property name="appPath">/opt/aspire/product/appdown/app/weibo.apk</Property><Property name="provinceId">{"province_list":{"province_list":[{"province_id":8}]}}</Property><Property name="appSize">10.0</Property><Property name="isDownload">0</Property><Property name="sort">0</Property><Property name="appId">20160406</Property><Property name="personNum">7</Property><Property name="remark"></Property><Property name="iconUrl"></Property><Property name="indexImgUrl"></Property><Property name="downloadUrl">http://10.12.3.201:26666/appdownload?appId=#appId#&amp;ch=hb&amp;portalType=WAP&amp;msisdn=#msisdn#</Property><Property name="endTime">2999-12-31 10:45:47</Property><Property name="appPackageName">vvm</Property><Property name="forwardUrl"></Property><Property name="productType">2</Property><Property name="startTime">2016-04-06 15:08:50</Property><Property name="appDesc">内蒙手机营业厅</Property><Property name="extIconUrl"></Property><Property name="mainActivity">应用主类名</Property><Property name="activityCode">nmwt</Property><Property name="status">0</Property><Property name="imgUrl"></Property><Property name="appName">内蒙手机营业厅</Property><Property name="ruleValue">10.0</Property><Property name="trySecond"></Property><Property name="isShow">0</Property></Result></Results></PSSResp>
+2016-04-20 14:01:14  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appActivityList</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="provinceID">13</Property> 
+<Property name="category">1</Property> 
+<Property name="sortBy">1</Property> 
+<Property name="keyWord">a</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appActivityList</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="provinceID">13</Property> 
+<Property name="category">1</Property> 
+<Property name="sortBy">1</Property> 
+<Property name="keyWord">a</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:14  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>appActivityList</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>appActivityList</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:01:15  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appDownSuccessNotify</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="appId">1</Property> 
+<Property name="operType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appDownSuccessNotify</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="appId">1</Property> 
+<Property name="operType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:15  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>appDownSuccessNotify</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>appDownSuccessNotify</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:15  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appDownSuccessNotify</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13500660000</Property> 
+<Property name="appId">20160406</Property> 
+<Property name="operType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>appDownSuccessNotify</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13500660000</Property> 
+<Property name="appId">20160406</Property> 
+<Property name="operType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:15  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>appDownSuccessNotify</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>appDownSuccessNotify</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:01:15  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:15  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><hRet>1</hRet></PSSResp>
+2016-04-20 14:01:15  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410029</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>querySignMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410029</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:15  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="iSignToday">1</Property><Property name="reSignTimes">1</Property><Property name="pointId">6</Property><Property name="signTimes">1</Property></Params><Results><ResultTotal>42</ResultTotal><Result><Property name="pointName">流量币</Property><Property name="index">1</Property><Property name="pointId">1</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">2</Property><Property name="pointId">2</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">3</Property><Property name="pointId">3</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">4</Property><Property name="pointId">4</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">5</Property><Property name="pointId">5</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">6</Property><Property name="pointId">6</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">7</Property><Property name="pointId">7</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">8</Property><Property name="pointId">8</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">9</Property><Property name="pointId">9</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">10</Property><Property name="pointId">10</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">11</Property><Property name="pointId">11</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">12</Property><Property name="pointId">12</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">13</Property><Property name="pointId">13</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">14</Property><Property name="pointId">14</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">15</Property><Property name="pointId">15</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">16</Property><Property name="pointId">16</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">17</Property><Property name="pointId">17</Property><Property name="productId">15</Property><Property name="pointType">3</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">18</Property><Property name="pointId">18</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">19</Property><Property name="pointId">19</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">20</Property><Property name="pointId">20</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">21</Property><Property name="pointId">21</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">22</Property><Property name="pointId">22</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">23</Property><Property name="pointId">23</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">24</Property><Property name="pointId">24</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">25</Property><Property name="pointId">25</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">100元电子券</Property><Property name="index">26</Property><Property name="pointId">26</Property><Property name="productId">1003</Property><Property name="pointType">2</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">27</Property><Property name="pointId">27</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">28</Property><Property name="pointId">28</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">29</Property><Property name="pointId">29</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">30</Property><Property name="pointId">30</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">31</Property><Property name="pointId">31</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">32</Property><Property name="pointId">32</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">33</Property><Property name="pointId">33</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">34</Property><Property name="pointId">34</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">35</Property><Property name="pointId">35</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">36</Property><Property name="pointId">36</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">37</Property><Property name="pointId">37</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">38</Property><Property name="pointId">38</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">39</Property><Property name="pointId">39</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">40</Property><Property name="pointId">40</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">41</Property><Property name="pointId">41</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">42</Property><Property name="pointId">42</Property><Property name="productId">20</Property><Property name="pointType">0</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>querySignMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="iSignToday">1</Property><Property name="reSignTimes">1</Property><Property name="pointId">6</Property><Property name="signTimes">1</Property></Params><Results><ResultTotal>42</ResultTotal><Result><Property name="pointName">流量币</Property><Property name="index">1</Property><Property name="pointId">1</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">2</Property><Property name="pointId">2</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">3</Property><Property name="pointId">3</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">4</Property><Property name="pointId">4</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">5</Property><Property name="pointId">5</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">6</Property><Property name="pointId">6</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">7</Property><Property name="pointId">7</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">8</Property><Property name="pointId">8</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">9</Property><Property name="pointId">9</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">10</Property><Property name="pointId">10</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">彩印0元包</Property><Property name="index">11</Property><Property name="pointId">11</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">12</Property><Property name="pointId">12</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">13</Property><Property name="pointId">13</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">14</Property><Property name="pointId">14</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">15</Property><Property name="pointId">15</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">16</Property><Property name="pointId">16</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">17</Property><Property name="pointId">17</Property><Property name="productId">15</Property><Property name="pointType">3</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">18</Property><Property name="pointId">18</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">19</Property><Property name="pointId">19</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">20</Property><Property name="pointId">20</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">21</Property><Property name="pointId">21</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">22</Property><Property name="pointId">22</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">23</Property><Property name="pointId">23</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">24</Property><Property name="pointId">24</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">25</Property><Property name="pointId">25</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">100元电子券</Property><Property name="index">26</Property><Property name="pointId">26</Property><Property name="productId">1003</Property><Property name="pointType">2</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">27</Property><Property name="pointId">27</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">28</Property><Property name="pointId">28</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">29</Property><Property name="pointId">29</Property><Property name="productId">1</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">30</Property><Property name="pointId">30</Property><Property name="productId">3</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">31</Property><Property name="pointId">31</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">32</Property><Property name="pointId">32</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">33</Property><Property name="pointId">33</Property><Property name="productId">2</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">34</Property><Property name="pointId">34</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">35</Property><Property name="pointId">35</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">36</Property><Property name="pointId">36</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">37</Property><Property name="pointId">37</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">38</Property><Property name="pointId">38</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">39</Property><Property name="pointId">39</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">40</Property><Property name="pointId">40</Property><Property name="productId">5</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">41</Property><Property name="pointId">41</Property><Property name="productId">10</Property><Property name="pointType">0</Property></Result><Result><Property name="pointName">流量币</Property><Property name="index">42</Property><Property name="pointId">42</Property><Property name="productId">20</Property><Property name="pointType">0</Property></Result></Results></PSSResp>
+2016-04-20 14:01:15  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:15  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:15  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:16  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>signMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="signId">239711</Property><Property name="newPointId">6</Property><Property name="signNumber">6</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="pointMsg">彩印0元包</Property><Property name="pointId">2</Property><Property name="credit">5</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="signId">239711</Property><Property name="pointMsg">流量币</Property><Property name="pointId">6</Property><Property name="credit">3.0</Property><Property name="pointType">0</Property><Property name="productId">3</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>signMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="signId">239711</Property><Property name="newPointId">6</Property><Property name="signNumber">6</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="pointMsg">彩印0元包</Property><Property name="pointId">2</Property><Property name="credit">5</Property><Property name="productId">9021</Property><Property name="pointType">1</Property></Result><Result><Property name="signId">239711</Property><Property name="pointMsg">流量币</Property><Property name="pointId">6</Property><Property name="credit">3.0</Property><Property name="pointType">0</Property><Property name="productId">3</Property></Result></Results></PSSResp>
+2016-04-20 14:01:16  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>signMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410034</Property> 
+<Property name="signType">0</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:16  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30007</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>signMonopolyService</FunCode><hRet>30007</hRet></PSSResp>
+2016-04-20 14:01:16  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="signId">1000000</Property> 
+<Property name="pointId">26</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="signId">1000000</Property> 
+<Property name="pointId">26</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:16  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeMonopolyService</FunCode><hRet>1</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>shakeMonopolyService</FunCode><hRet>1</hRet></PSSResp>
+2016-04-20 14:01:16  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13401000499</Property> 
+<Property name="signId">1000000</Property> 
+<Property name="pointId">26</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>shakeMonopolyService</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13401000499</Property> 
+<Property name="signId">1000000</Property> 
+<Property name="pointId">26</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:16  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="shakeMonopoly">1</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>shakeMonopolyService</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="shakeMonopoly">1</Property></Result></Results></PSSResp>
+2016-04-20 14:01:16  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:16  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:16  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID">1</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:17  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>2</ResultTotal><Result><Property name="rate">20%</Property><Property name="lostCredit">10.0</Property><Property name="brpRuleId">1</Property></Result><Result><Property name="rate">50%</Property><Property name="lostCredit">20.0</Property><Property name="brpRuleId">2</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>2</ResultTotal><Result><Property name="rate">20%</Property><Property name="lostCredit">10.0</Property><Property name="brpRuleId">1</Property></Result><Result><Property name="rate">50%</Property><Property name="lostCredit">20.0</Property><Property name="brpRuleId">2</Property></Result></Results></PSSResp>
+2016-04-20 14:01:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:17  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryExcDetails</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryExcDetails</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:17  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet></PSSResp>
+2016-04-20 14:01:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryExcDetails</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417455</Property> 
+<Property name="startId">1</Property> 
+<Property name="pageNum">10</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:17  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>3</ResultTotal><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">100</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">101</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:10</Property><Property name="crExcHistID">99</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryExcDetails</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>3</ResultTotal><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">100</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:13</Property><Property name="crExcHistID">101</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result><Result><Property name="crExcTime">2016-02-01 21:33:10</Property><Property name="crExcHistID">99</Property><Property name="crExcState">1</Property><Property name="type">0</Property><Property name="productName">100M省内流量</Property><Property name="lostCredit">100.0</Property></Result></Results></PSSResp>
+2016-04-20 14:01:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">wsde4rfgt67hy</Property> 
+<Property name="msisdn"></Property> 
+<Property name="activityCode">rrr</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">wsde4rfgt67hy</Property> 
+<Property name="msisdn"></Property> 
+<Property name="activityCode">rrr</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:17  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>50003</hRet><Params></Params></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>50003</hRet><Params></Params></PSSResp>
+2016-04-20 14:01:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>0</hRet><Params></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>0</hRet><Params></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>
+2016-04-20 14:01:18  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>70202</hRet><Params><Property name="failtime">2016-04-20 13:40:59</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>70202</hRet><Params><Property name="failtime">2016-04-20 13:40:59</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>
+2016-04-20 14:01:18  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryScoopInInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId"></Property> 
+<Property name="mobile">1347540000</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryScoopInInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId"></Property> 
+<Property name="mobile">1347540000</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryScoopInInfo</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryScoopInInfo</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:18  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryScoopInInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="mobile">1347540000</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryScoopInInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="mobile">1347540000</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryScoopInInfo</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="startTime">20160201000001</Property><Property name="profitRate">0.2</Property><Property name="totalNum">3</Property><Property name="ruleNum">20</Property><Property name="ruleValue">10</Property><Property name="totalAmount">600</Property><Property name="targetAmount">5000000</Property><Property name="endTime">20160207235959</Property><Property name="ownNum">0</Property></Params></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryScoopInInfo</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="startTime">20160201000001</Property><Property name="profitRate">0.2</Property><Property name="totalNum">3</Property><Property name="ruleNum">20</Property><Property name="ruleValue">10</Property><Property name="totalAmount">600</Property><Property name="targetAmount">5000000</Property><Property name="endTime">20160207235959</Property><Property name="ownNum">0</Property></Params></PSSResp>
+2016-04-20 14:01:18  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId"></Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId"></Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:18  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>
+2016-04-20 14:01:18  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>orderScoopInProduct</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="actId">1002</Property> 
+<Property name="orderNum">20</Property> 
+<Property name="mobile">13475417475</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>orderScoopInProduct</FunCode><hRet>73001</hRet></PSSResp>
+2016-04-20 14:01:19  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryMonthGameActWinScratch</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryMonthGameActWinScratch</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:19  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryMonthGameActWinScratch</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryMonthGameActWinScratch</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:19  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryMonthGameActWinScratch</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417476</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryMonthGameActWinScratch</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475417476</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:19  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryMonthGameActWinScratch</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="winTime">2016-04-13 14:00:52</Property><Property name="msisdn">13475417476</Property><Property name="productValue">10.0</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryMonthGameActWinScratch</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>1</ResultTotal><Result><Property name="winTime">2016-04-13 14:00:52</Property><Property name="msisdn">13475417476</Property><Property name="productValue">10.0</Property></Result></Results></PSSResp>
+2016-04-20 14:01:19  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>scrathDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>scrathDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:19  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>scrathDraw</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>scrathDraw</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-20 14:01:19  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>scrathDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410000</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>scrathDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410000</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:20  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>scrathDraw</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="msisdn">13475410000</Property><Property name="credit">10.0</Property></Params></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>scrathDraw</FunCode><Operate></Operate><hRet>0</hRet><Params><Property name="msisdn">13475410000</Property><Property name="credit">10.0</Property></Params></PSSResp>
+2016-04-20 14:01:20  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>scrathDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410000</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>scrathDraw</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="msisdn">13475410000</Property> 
+</Params>
+</PSSReq>
+
+2016-04-20 14:01:20  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>scrathDraw</FunCode><hRet>50023</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>scrathDraw</FunCode><hRet>50023</hRet></PSSResp>

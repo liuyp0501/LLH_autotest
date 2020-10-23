@@ -1,0 +1,80 @@
+2016-04-18 16:10:41  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID"></Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID"></Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 16:10:41  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><hRet>30010</hRet></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version> 1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><hRet>30010</hRet></PSSResp>
+2016-04-18 16:10:41  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID">1</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>queryBrpInfo</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchangeID">1</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 16:10:41  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>2</ResultTotal><Result><Property name="rate">20%</Property><Property name="lostCredit">10.0</Property><Property name="brpRuleId">1</Property></Result><Result><Property name="rate">50%</Property><Property name="lostCredit">20.0</Property><Property name="brpRuleId">2</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>queryBrpInfo</FunCode><Operate></Operate><hRet>0</hRet><Results><ResultTotal>2</ResultTotal><Result><Property name="rate">20%</Property><Property name="lostCredit">10.0</Property><Property name="brpRuleId">1</Property></Result><Result><Property name="rate">50%</Property><Property name="lostCredit">20.0</Property><Property name="brpRuleId">2</Property></Result></Results></PSSResp>

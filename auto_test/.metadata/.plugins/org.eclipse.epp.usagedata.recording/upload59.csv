@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958839811
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958842327
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958846092
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958849388
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958856913
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958860640
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451958863790
+started,bundle,org.eclipse.mylyn.java.tasks,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.tasks",1451958863912
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958867658
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958885339
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958906573
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958907997
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1451958923865
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1451958934641
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958952650
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958953977
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958956981
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451958958261
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959018100
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959113454
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451959119413
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959119959
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959132859
+started,bundle,org.eclipse.compare,3.5.200.I20110525-0800,"org.eclipse.compare",1451959136665
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451959139021
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959139473
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959225410
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959232554
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959276451
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451959283704
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959284812
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959369565
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959399657
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959434133
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451959445022
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959446878
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959480371
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959483195
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959494271
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959495160
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959722248
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1451959755180
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451959893880
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451976667188
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451976723972
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451976728514
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451976741827
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451976773480
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451976774797
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451977047206
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451977113722
+started,bundle,org.eclipse.wst.sse.core,1.1.600.v201105162116,"org.eclipse.wst.sse.core",1451977115425
+error,log,,,"Core exception while retrieving the content description",1451977116200
+error,log,,,"Core exception while retrieving the content description",1451977116210
+error,log,,,"Core exception while retrieving the content description",1451977116220
+error,log,,,"Core exception while retrieving the content description",1451977116220
+error,log,,,"Core exception while retrieving the content description",1451977116220
+error,log,,,"Core exception while retrieving the content description",1451977116230
+error,log,,,"Core exception while retrieving the content description",1451977116230
+error,log,,,"Core exception while retrieving the content description",1451977116230
+error,log,,,"Core exception while retrieving the content description",1451977116280
+error,log,,,"Core exception while retrieving the content description",1451977116310
+error,log,,,"Core exception while retrieving the content description",1451977116699
+error,log,,,"Core exception while retrieving the content description",1451977116709
+error,log,,,"Core exception while retrieving the content description",1451977116719
+error,log,,,"Core exception while retrieving the content description",1451977116729
+error,log,,,"Core exception while retrieving the content description",1451977116739
+error,log,,,"Core exception while retrieving the content description",1451977116759
+error,log,,,"Core exception while retrieving the content description",1451977116759
+error,log,,,"Core exception while retrieving the content description",1451977116769
+error,log,,,"Core exception while retrieving the content description",1451977116779
+error,log,,,"Core exception while retrieving the content description",1451977116799
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451977117829
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451977121569
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.import",1451977121579
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.import",1451977121579
+error,log,,,"Core exception while retrieving the content description",1451977122664
+error,log,,,"Core exception while retrieving the content description",1451977122664
+error,log,,,"Core exception while retrieving the content description",1451977122664
+error,log,,,"Core exception while retrieving the content description",1451977122674
+error,log,,,"Core exception while retrieving the content description",1451977122674
+error,log,,,"Core exception while retrieving the content description",1451977122674
+error,log,,,"Core exception while retrieving the content description",1451977122684
+error,log,,,"Core exception while retrieving the content description",1451977122684
+error,log,,,"Core exception while retrieving the content description",1451977122684
+error,log,,,"Core exception while retrieving the content description",1451977122684
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451977127960
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451977131947
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451977152836
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451977221567
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451977331578
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451977950763
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451977956893
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451978982331
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451978983522
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451978987478
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451979753008
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1451979754068
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451979755397
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451979796658
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451979805586
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451979806998
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451979869090
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980006377
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980021510
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980033748
+error,log,,,"Info: Rebuilding internal caches: D:\\WORK\\自动化部署脚本\\TestEnvDeploy\\.metadata\\.plugins\\org.eclipse.core.resources\\.projects\\auto_test\\com.python.pydev.analysis\\AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)",1451980084487
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980085184
+started,bundle,org.eclipse.jpt.common.core,1.0.0.v201105180000,"org.eclipse.jpt.common.core",1451980085533
+started,bundle,org.eclipse.jpt.jpa.core,3.0.0.v201105250001,"org.eclipse.jpt.jpa.core",1451980085553
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451980088995
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980144546
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980367618
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980394841
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451980394975
+closed,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980394995
+started,bundle,org.eclipse.wst.ws.service.policy.ui,1.0.202.v201004211732,"org.eclipse.wst.ws.service.policy.ui",1451980444760
+started,bundle,org.eclipse.wst.ws.service.policy,1.0.303.v201009221810,"org.eclipse.wst.ws.service.policy",1451980444781
+started,bundle,org.eclipse.wst.command.env,1.0.409.v201004211805,"org.eclipse.wst.command.env",1451980444881
+started,bundle,org.eclipse.wst.ws,1.1.203.v201004211805,"org.eclipse.wst.ws",1451980444881
+started,bundle,org.eclipse.wst.common.frameworks.ui,1.2.100.v201105122000,"org.eclipse.wst.common.frameworks.ui",1451980444941
+started,bundle,org.python.pydev.customizations,2.6.0.2012062818,"org.python.pydev.customizations",1451980445230
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980460728
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980473743
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980523878
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980529894
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980542785
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980545227
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980550412
+opened,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980569667
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980569765
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980569795
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451980578490
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980585369
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980661030
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980661956
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980670211
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980673907
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980674071
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980675970
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451980692811
+opened,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980695213
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980695296
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451980706115
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980707172
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451980709988
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980719757
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980721063
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980733241
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1451980777610
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451980793881
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980795116
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451980798262
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980818508
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980823615
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1451980858047
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980862266
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980868778
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980870006
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980871087
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980871231
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980874810
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1451980879807
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980910142
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451980927259
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980928688
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451980931632
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980935786
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980937810
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980939362
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980946099
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451980948001
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451980954319
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451980955354
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451980956602
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981013762
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981030007
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981031195
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981033760
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981041649
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981045728
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981046690
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981047950
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981051586
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981056073
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981057358
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981058954
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981063027
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981070876
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981072158
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981074030
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981075897
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981079481
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981081046
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981083863
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981092274
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981094263
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981096777
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981103530
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981104549
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981107989
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981127963
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981133514
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981155728
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981164611
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981165802
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981169193
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981256696
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981258056
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451981302345
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981304062
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981306462
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981307459
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1451981309150
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981316002
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981391460
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981553821
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981574819
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981630811
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451981632298
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981648942
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981682177
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1451981685666
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981692386
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981693722
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981693784
+closed,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981693784
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451981698591
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981700766
+started,bundle,org.eclipse.jst.j2ee.core,1.2.100.v201105122000,"org.eclipse.jst.j2ee.core",1451981702347
+started,bundle,org.eclipse.jem,2.0.500.v201104271400,"org.eclipse.jem",1451981702411
+started,bundle,org.eclipse.wst.xml.core,1.1.600.v201104251227,"org.eclipse.wst.xml.core",1451981702511
+started,bundle,org.eclipse.wst.validation,1.2.300.v201104190230,"org.eclipse.wst.validation",1451981702561
+started,bundle,org.eclipse.jst.j2ee,1.1.500.v201105122000,"org.eclipse.jst.j2ee",1451981702611
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.300.v201104272153,"org.eclipse.wst.jsdt.manipulation",1451981703704
+started,bundle,org.eclipse.wst.jsdt.ui,1.1.100.v201105041953,"org.eclipse.wst.jsdt.ui",1451981703938
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981704873
+executed,command,org.eclipse.ltk.ui.refactoring,3.6.0.v20110505-0800,"org.eclipse.ltk.ui.refactoring.commands.deleteResources",1451981704913
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981707779
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981709116
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981723670
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981797985
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451981798973
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981802258
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981874441
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981881431
+error,log,,,"Info: Rebuilding internal caches: D:\\WORK\\自动化部署脚本\\TestEnvDeploy\\.metadata\\.plugins\\org.eclipse.core.resources\\.projects\\llj_autotest\\com.python.pydev.analysis\\AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)",1451981929515
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981929590
+activated,view,org.python.pydev,2.6.0.2012062818,"org.python.pydev.navigator.view",1451981932174
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981935680
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981966917
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451981976591
+opened,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982001364
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982001404
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1451982001434
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982035151
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982042499
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982058250
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451982066884
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982067845
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1451982070269
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451982071305
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982078001
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451982083861
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982084756
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451982086627
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982091711
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982105229
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982129901
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451982134678
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982135673
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1451982136800
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982144638
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1451982149987
+activated,editor,org.python.pydev,2.6.0.2012062818,"org.python.pydev.editor.PythonEditor",1451982151852

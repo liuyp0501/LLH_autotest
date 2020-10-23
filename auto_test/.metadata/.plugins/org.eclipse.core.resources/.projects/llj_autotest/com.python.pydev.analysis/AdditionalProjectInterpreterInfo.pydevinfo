@@ -1,0 +1,29 @@
+-- VERSION_3
+-- START DISKCACHE
+D:\WORK\自动化部署脚本\TestEnvDeploy\.metadata\.plugins\org.eclipse.core.resources\.projects\llj_autotest\com.python.pydev.analysis\v1_indexcache
+.v1_indexcache
+actiontest|0|D:\auto_test\actiontest.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=actiontest
+-- END DICTIONARY
+-- START TREE 1
+13
+bas|1|basedir!11@
+che|1|checkdata!10@
+css|2|css_host!11@css_host_gd!11@
+dri|1|driver!10@
+fai|1|Failed_Count!11@
+fre|1|fresh_mem!10@
+ini|2|initdata_gd!10@initdata!10@
+log|3|logdir!11@log!10@logdetail!10@
+ss_|1|ss_url!11@
+suc|1|Succed_Count!11@
+tem|1|tempdir!11@
+use|1|userCreditChange!10@
+zdh|1|zdh!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

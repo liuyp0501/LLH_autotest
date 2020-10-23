@@ -1,0 +1,41 @@
+-- VERSION_3
+-- START DISKCACHE
+D:\WORK\自动化部署脚本\TestEnvDeploy\.metadata\.plugins\org.eclipse.core.resources\.projects\llj\com.python.pydev.analysis\v1_indexcache
+.v1_indexcache
+action|0|D:\lljtest\action.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=action
+-- END DICTIONARY
+-- START TREE 1
+25
+bas|1|basedir!11@
+buy|1|buyProduct!10@
+che|1|checkdata!10@
+com|2|companyCreditHandsel!10@companyCreditTransfer!10@
+cre|1|creditHandles!10@
+css|2|css_host_gd!11@css_host!11@
+dra|1|drawCreditExchange!10@
+dri|1|driver!10@
+fai|1|Failed_Count!11@
+fre|1|fresh_mem!10@
+get|2|getOrSetSound!10@getOrUpdateNickName!10@
+ini|2|initdata!10@initdata_gd!10@
+log|3|log!10@logdir!11@logdetail!10@
+ord|1|orderProduct!10@
+pre|1|prefixQuery!10@
+que|32|queryBuyProductInfo!10@queryBuyProductlist!10@queryOrUpdateUserExtend!10@queryLikeProducts!10@queryCreditPrize!10@queryAcctPeriod!10@queryInviteCode!10@queryCreditAccess!10@querCreditSum!10@queryLikeProducts_new!10@queryUserAcctDetails!10@queryPackage!10@queryA5AdvertList!10@queryExchangeList!10@queryOrderProductlist!10@queryCompanyAcctDetails!10@queryActivityIsWin!10@queryCompanyAcct!10@queryLogin!10@queryCreditPrizeDetails!10@queryCreditHandlesInfo!10@querySelectionProducts!10@queryProducts!10@queryA5InviteInfo!10@queryRechargeList!10@queryNmCompOrderStatus!10@queryA5NewActivityList!10@queryBuyHistory!10@queryPersonCreditExchangeResult!10@queryUserAcct!10@queryPhonebook!10@queryContacts!10@
+rec|3|receiveHandlesCredit2!10@receiveHandlesCredit!10@rechargeCredit!10@
+sha|8|shakeQueryCredit!10@shakeCreditRanking!10@shakeLoginPassword!10@shakeRegester!10@shakeDraw!10@shakeLogin!10@shakeQueryMyAssets!10@shakeCreditExchange!10@
+ss_|1|ss_url!11@
+suc|1|Succed_Count!11@
+tem|1|tempdir!11@
+tig|1|tigerDraw!10@
+upl|1|uploadPhonebook!10@
+use|2|userCreditHandsel!10@userCreditChange!10@
+zdh|1|zdh!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

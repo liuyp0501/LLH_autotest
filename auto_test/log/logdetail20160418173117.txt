@@ -1,0 +1,132 @@
+2016-04-18 17:31:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">wsde4rfgt67hy</Property> 
+<Property name="msisdn"></Property> 
+<Property name="activityCode">rrr</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">wsde4rfgt67hy</Property> 
+<Property name="msisdn"></Property> 
+<Property name="activityCode">rrr</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 17:31:17  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>50003</hRet><Params></Params></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>50003</hRet><Params></Params></PSSResp>
+2016-04-18 17:31:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 17:31:17  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>0</hRet><Params></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>0</hRet><Params></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>
+2016-04-18 17:31:17  the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+the request is:<?xml version="1.0" encoding="utf-8"?>
+<PSSReq>
+	<TransactionID>20110101052914552112</TransactionID>
+	<Version> 1.0.0.0</Version>
+	<SendAddress>
+		<PortalType>WAP</PortalType>
+		<PortalID>001</PortalID>
+	</SendAddress>
+	<DestAddress>
+		<DeviceType>200</DeviceType>
+	</DestAddress>
+	<PortalType>001</PortalType>
+	<FunCode>exchangeCodeGiveCredit</FunCode>
+    <Operate></Operate>
+	<Params> 
+<Property name="exchange_code">XAA7LES929T3</Property> 
+<Property name="msisdn">13412345678</Property> 
+<Property name="activityCode">wljsm</Property> 
+</Params>
+</PSSReq>
+
+2016-04-18 17:31:18  the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>70202</hRet><Params><Property name="failtime">2016-04-18 17:11:02</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>
+the response detail is:<?xml version="1.0" encoding="UTF-8"?><PSSResp><TransactionID>20110101052914552112</TransactionID><Version>1.0.0.0</Version><FunCode>exchangeCodeGiveCredit</FunCode><Operate></Operate><hRet>70202</hRet><Params><Property name="failtime">2016-04-18 17:11:02</Property></Params><Results><ResultTotal>2</ResultTotal><Result><Property name="lockTimeRule">60</Property><Property name="errorCodeRule">70203</Property><Property name="failTimeRule">3</Property></Result><Result><Property name="lockTimeRule">1440</Property><Property name="errorCodeRule">70204</Property><Property name="failTimeRule">10</Property></Result></Results></PSSResp>

@@ -1,0 +1,3099 @@
+# -*- coding:utf-8 -*-
+
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
+from SocketServer import ThreadingMixIn
+from xlutils.copy import copy
+import xml.dom.minidom
+import string,httplib,urllib,sys,time,datetime
+import threading
+import MySQLdb
+import os
+import xlrd
+import xlwt
+import time
+
+
+ss_url  = "/pss/oss.aspire"
+css_host ='10.12.3.201:36666'  
+css_host_gd='10.12.3.201:48888'
+#logfile = 'D:\WORK\lljzdh\log.txt'
+logdir ='D:\\lljtest\\log'
+basedir='D:\\lljtest'
+tempdir='D:\\lljtest\\template'
+#logdetailfile = r'D:\WORK\lljzdh\logdetail.txt'
+Failed_Count = 0
+Succed_Count = 0
+
+
+
+
+def initdata(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        charset='utf8',
+        user='hub_pss',
+        passwd='hub_pss',
+        db ='hub_pss',
+        client_flag=6
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    #print str
+   
+    cur.execute(str(paras[0]).encode('utf8'))
+    cur.close()
+    conn.commit()
+    conn.close()
+    print "*------执行initdata脚本-----------*"
+    return 0
+
+def initdata_gd(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        charset='utf8',
+        user='testpss',
+        passwd='testpss',
+        db ='gdpss',
+        client_flag=6
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    #print str
+   
+    cur.execute(str(paras[0]).encode('utf8'))
+    
+    cur.close()
+    conn.commit()
+    conn.close()
+    print "*------执行initdata_gd脚本-----------*"
+    return 0
+
+
+
+def checkdata(paras):
+    conn= MySQLdb.connect(
+        host='10.12.9.161',
+        port = 3306,
+        charset='utf8',
+        user='hub_pss',
+        passwd='hub_pss',
+        db ='hub_pss'
+        )
+    cur = conn.cursor(MySQLdb.cursors.DictCursor)
+    cur.execute(paras[0])
+    rs =cur.fetchall()
+    indx1=str(rs).find('(')
+    indx2=str(rs).find(',)')
+    rs1=str(rs)[indx1+1:indx2]
+    rs1=rs1.replace('Decimal', '')
+    rs1=rs1.replace('None','0')
+    #dict=eval(rs1)
+    #if float(dict['result'])==float(paras[1]):
+    #   return 0
+    rs1=str(rs1)
+    #dict=eval(rs1)
+    #dict=dict['result']
+    dict1=eval(rs1)['result']
+    print float(dict1)
+    print float(paras[1])
+    print float(dict1)==float(paras[1])
+    print "True 表示期望检查的数据正确，Flase表示数据错误"
+    if float(dict1)==float(paras[1]):
+#   if str(dict)==str(paras[1]):
+        return 0    
+    else:
+        return 1
+
+    cur.close()
+    conn.commit()
+    conn.close()    
+    
+def log(str1):
+    filestr = open(logfile, 'a+' ) 
+    starttime=time.time()
+    #if type(str1) == type([]):
+    #    str1 = [str(li) for li in str1]
+    #log_str = '  '.join(str1)
+    #print type(log_str),log_str.encode
+  
+    filestr.write(time.strftime(u'%Y-%m-%d %H:%M:%S',time.localtime(starttime))+'  '+str(str1))
+    filestr.write('\n')
+    filestr.close()
+    
+    
+def logdetail(str2):
+    filestr = open(logdetailfile, 'a+' ) 
+    starttime=time.time()
+    filestr.write(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(starttime))+'  '+str(str2))
+    filestr.write('\n')
+    filestr.write(str2)
+    filestr.write('\n')
+    filestr.close()
+    
+def driver( xlsfile, sheetname,index):
+    xls = xlrd.open_workbook( xlsfile, formatting_info=True )
+    sheet = xls.sheet_by_name(sheetname)
+    newWb = copy(xls);
+    ws = newWb.get_sheet(int(index));
+    
+    ret=10
+    
+    font0= xlwt.Font()
+    font0.name= 'Times New Roman'
+    font0.colour_index= 3
+    font0.bold= True
+    style0= xlwt.XFStyle()
+    style0.font= font0
+    
+    font1= xlwt.Font()
+    font1.name= 'Times New Roman'
+    font1.colour_index= 2
+    font1.bold= True
+    style1= xlwt.XFStyle()
+    style1.font= font1
+    
+    #create db conn
+    
+    print sheetname
+    
+    for li in range( 1, sheet.nrows ):
+        name = sheet.cell( li, 0 ).value
+        paras=['']*10
+        paras[0]=sheet.cell( li, 2 ).value
+        paras[1]=sheet.cell( li, 3 ).value
+        paras[2]=sheet.cell( li, 4 ).value
+        paras[3]=sheet.cell( li, 5 ).value
+        paras[4]=sheet.cell( li, 6 ).value
+        paras[5]=sheet.cell( li, 7 ).value
+        paras[6]=sheet.cell( li, 8 ).value
+        paras[7]=sheet.cell( li, 9 ).value
+        paras[8]=sheet.cell( li, 10).value
+        paras[9]=sheet.cell( li, 11).value
+        if  name=='shakeDraw':
+            ret=shakeDraw(paras)
+        elif name=='tigerDraw':
+            ret=tigerDraw(paras)
+        elif name=='queryProducts':
+            ret=queryProducts(paras)
+        elif name=='queryUserAcct':
+            ret=queryUserAcct(paras)  
+        elif name=='queryUserAcctDetails':
+            ret=queryUserAcctDetails(paras) 
+        elif name=='queryCompanyAcctDetails':
+            ret=queryCompanyAcctDetails(paras)
+        elif name=='queryCompanyAcct':
+            ret=queryCompanyAcct(paras)
+        elif name=='companyCreditHandsel':
+            ret=companyCreditHandsel(paras)    
+        elif name=='userCreditHandsel':
+            ret=userCreditHandsel(paras)
+        elif name=='companyCreditTransfer':
+            ret=companyCreditTransfer(paras)
+        elif name=='shakeLogin':
+            ret=shakeLogin(paras)
+        elif name=='queryLogin':
+            ret=queryLogin(paras)
+        elif name=='getOrUpdateNickName':
+            ret=getOrUpdateNickName(paras)
+        elif name=='getOrSetSound':
+            ret=getOrSetSound(paras)
+        elif name=='uploadPhonebook':
+            ret=uploadPhonebook(paras)  
+        elif name=='queryContacts':
+            ret=queryContacts(paras) 
+        elif name=='queryPhonebook':
+            ret=queryPhonebook(paras)
+        elif name=='queryPackage':
+            ret=queryPackage(paras)
+        elif name=='shakeQueryCredit':
+            ret=shakeQueryCredit(paras)
+        elif name=='queryCreditAccess':
+            ret=queryCreditAccess(paras)
+        elif name=='querCreditSum':
+            ret=querCreditSum(paras)
+        elif name=='shakeCreditRanking':
+            ret= shakeCreditRanking(paras)
+        elif name=='shakeQueryMyAssets':
+            ret=shakeQueryMyAssets(paras)
+        elif name=='prefixQuery':
+            ret=prefixQuery(paras)
+        elif name=='queryOrUpdateUserExtend':
+            ret=queryOrUpdateUserExtend(paras)
+        elif name=='queryActivityIsWin':   
+            ret=queryActivityIsWin(paras) 
+        elif name=='queryAcctPeriod':
+            ret=queryAcctPeriod(paras)
+        elif name=='shakeLoginPassword':
+            ret=shakeLoginPassword(paras)
+        elif name=='shakeCreditExchange':
+            ret=shakeCreditExchange(paras) 
+        elif name=='shakeRegester':
+            ret=shakeRegester(paras)
+        elif name=='drawCreditExchange':
+            ret=drawCreditExchange(paras) 
+        elif name=='queryCreditPrize':
+            ret=queryCreditPrize(paras) 
+        elif name=='queryCreditPrizeDetails':
+            ret=queryCreditPrizeDetails(paras) 
+        elif name=='queryExchangeList':
+            ret=queryExchangeList(paras) 
+        elif name=='queryRechargeList':
+            ret=queryRechargeList(paras)
+        elif name=='rechargeCredit':
+            ret=rechargeCredit(paras)
+        elif name=='creditHandles':
+            ret=creditHandles(paras)
+        elif name=='receiveHandlesCredit':
+            ret=receiveHandlesCredit(paras)
+        elif name=='receiveHandlesCredit2':
+            ret=receiveHandlesCredit2(paras)
+        elif name=='queryCreditHandlesInfo':
+            ret=queryCreditHandlesInfo(paras)
+        elif name=='queryOrderProductlist':
+            ret=queryOrderProductlist(paras)
+        elif name=='orderProduct':
+            ret=orderProduct(paras)
+        elif name=='queryNmCompOrderStatus':
+            ret=queryNmCompOrderStatus(paras)
+        elif name=='queryBuyProductlist':
+            ret=queryBuyProductlist(paras)
+        elif name=='buyProduct':
+            ret=buyProduct(paras)
+        elif name=='querySelectionProducts':
+            ret=querySelectionProducts(paras)
+        elif name=='queryBuyProductInfo':
+            ret=queryBuyProductInfo(paras)
+        elif name=='queryLikeProducts':
+            ret=queryLikeProducts(paras)
+        elif name=='queryBuyHistory':
+            ret=queryBuyHistory(paras)
+        elif name=='queryA5AdvertList':
+            ret=queryA5AdvertList(paras)
+        elif name=='queryA5NewActivityList':
+            ret=queryA5NewActivityList(paras)
+        elif name=='queryA5InviteInfo':
+            ret=queryA5InviteInfo(paras)
+        elif name=='queryInviteCode':
+            ret=queryInviteCode(paras) 
+        elif name=='queryLikeProducts_new':
+            ret=queryLikeProducts_new(paras)
+        elif name=='userCreditChange':
+            ret=userCreditChange(paras)
+        elif name=='queryPersonCreditExchangeResult':
+            ret=queryPersonCreditExchangeResult(paras)                         
+        elif name=='checkdata':
+            ret=checkdata(paras)
+        elif name=='initdata':
+            ret=initdata(paras)
+        elif name=='initdata_gd':
+            ret=initdata_gd(paras)
+       
+        if  ret==0:
+            ws.write(li, 1, 'OK',style0)
+        elif ret==1:
+            ws.write(li, 1, 'FAIL',style1) 
+        ret=10 
+             
+    #newWb.save(xlsfile)
+    return
+
+
+def shakeDraw(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    #phonestr = open(parasfile, 'r' ).readlines() 
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    logdetail('the request is:%s'%body.replace('{msisdn}', paras[1]).replace('{othersMsisdn}', paras[2]))
+    client.request("POST", ss_url, body.replace('{msisdn}', paras[1]).replace('{othersMsisdn}', paras[2]))
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='shakeDraw'
+    if rtncode==paras[3]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def tigerDraw(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    #phonestr = open(parasfile, 'r' ).readlines() 
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    logdetail('the request is:%s'%body.replace('{msisdn}', paras[1]).replace('{consumeCredit}', paras[2]).replace('{times}', paras[3]))
+    client.request("POST", ss_url, body.replace('{msisdn}', paras[1]).replace('{consumeCredit}', paras[2]).replace('{times}', paras[3]))
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='tigerDraw'
+    if rtncode==paras[4]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return  1
+    client.close()
+  
+def queryProducts(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    #phonestr = open(parasfile, 'r' ).readlines() 
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    logdetail('the request is:%s'%body.replace('{catalog_type}', paras[1]).replace('{type}', paras[2]).replace('{product_type}', paras[3]))
+    client.request("POST", ss_url, body.replace('{catalog_type}', paras[1]).replace('{type}', paras[2]).replace('{product_type}', paras[3]))
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    paras[0]='queryProducts'
+    if rtncode==paras[4]:
+        paras.append(rtncode)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return  1
+    client.close()
+   
+def queryUserAcct(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    logdetail('the request is:%s'%body.replace('{msisdn}', paras[1]))
+    #client.request("POST", ss_url, body.replace('{msisdn}', paras[1]))
+    body=body.replace('{msisdn}',paras[1])
+    body=str(body).encode('utf8')
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode1=response[indx1+6:indx2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    if indx3==-1:
+        rtncode2=0
+    else:
+        rtncode2=response[indx3+13:indx4]
+    paras[0]='queryUserAcct'
+    
+        
+    if rtncode1==paras[2] and rtncode2==paras[3]:
+        paras.append(rtncode1)
+        paras.append(rtncode2)
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode1)
+        paras.append(rtncode2)
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def queryUserAcctDetails(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}', paras[1])
+    body=body.replace('{account_no}', paras[2])
+    body=body.replace('{account_period}', paras[3])
+    body=body.replace('{page_number}', paras[4])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryUserAcctDetailst'
+    if (rtncode==paras[5])&(int(total)==int(paras[6])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+      
+def queryCompanyAcctDetails(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{company_code}', paras[1])
+    body=body.replace('{account_no}', paras[2])
+    body=body.replace('{end_time}', paras[3])
+    body=body.replace('{page_number}', paras[4])
+    body=body.replace('{access_type}',paras[5])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryCompanyAcctDetails'
+    if (rtncode==paras[6])&(int(total)==int(paras[7])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def queryCompanyAcct(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{company_code}', paras[1])
+    body=body.replace('{acct_type}', paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the response is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryCompanyAcct'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def companyCreditHandsel(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{company_code}', paras[1])
+    body=body.replace('{credit}', paras[2])
+    body=body.replace('{description}', paras[3])
+    body=body.replace('{msisdn}', paras[4])
+    body=body.replace('{oper_time}', paras[5])
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='companyCreditHandsel'
+    if (rtncode==paras[6])&(int(total)==int(paras[7])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+    
+def userCreditHandsel(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{org_msisdn}',paras[1])
+    body=body.replace('{dest_msisdn}', paras[2])
+    body=body.replace('{credit}',paras[3])
+    body=body.replace('{description}',paras[4])
+    body=body.replace('{oper_time}', paras[5])
+    body=body.replace('{transactionID}',paras[6]) 
+    logdetail('the request is:%s'%body)
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='userCreditHandsel'
+    if (rtncode==paras[7])&(int(total)==int(paras[8])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def companyCreditTransfer(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{org_company_code}',paras[1])
+    body=body.replace('{credit}', paras[2])
+    body=body.replace('{dest_company_code}',paras[3])
+    body=body.replace('{description}',paras[4])
+    body=body.replace('{transactionID}', paras[5])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='companyCreditTransfer'
+    if (rtncode==paras[6])&(int(total)==int(paras[7])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        #print str(paras).encode('utf8')
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()     
+    
+def shakeLogin(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}', paras[1])
+    body=body.replace('{inviteCode}', paras[2])
+    body=body.replace('{imei}',paras[3])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='shakeLogin'
+    if (rtncode==paras[4])&(int(total)==int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+
+def queryLogin(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr  = open(basedir+'\\template'+'\\'+paras[0], 'r' ).readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}', paras[1])
+    body=body.replace('{imei}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    client.request("POST", ss_url, body)
+    response=client.getresponse().read()
+    logdetail('the reponse is:%s'%response)
+    indx1=response.find('<hRet>')
+    indx2=response.find('</hRet>')
+    rtncode=response[indx1+6:indx2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryLogin'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+        print str(paras).decode('raw_unicode_escape')
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def getOrUpdateNickName(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{nickName}', paras[2])
+    body=str(body).encode('utf8')
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='getOrUpdateNickName'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()      
+    
+def getOrSetSound(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{type}', paras[2])
+    body=body.replace('{isSound}', paras[3])
+    body=str(body).encode('utf8')
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='getOrSetSound'
+    if (rtncode==paras[4])&(int(total)==int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()      
+
+def uploadPhonebook(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{friendMsisdns}', paras[2])
+    body=body.replace('{imei}', paras[3])
+    body=body.replace('{isfresh}', paras[4])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='uploadPhonebook'
+    if (rtncode==paras[5])&(int(total)==int(paras[6])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+
+def queryContacts(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryContacts'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()          
+
+def queryPhonebook(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{type}',paras[2])
+    body=body.replace('{accountTypeID}',paras[3])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryPhonebook'
+    if (rtncode==paras[4])&(int(total)==int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def queryPackage(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryPackage'
+    if (rtncode==paras[2])&(int(total)>=int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+    
+def shakeQueryCredit(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='shakeQueryCredit'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+    
+def queryCreditAccess(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{startTime}',paras[2])
+    body=body.replace('{endTime}',paras[3])
+    body=body.replace('{from}',paras[4])
+    body=body.replace('{to}',paras[5])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryCreditAccess'
+    if (rtncode==paras[6])&(int(total)==int(paras[7])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()    
+    
+def querCreditSum(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{accountTypeID}',paras[2])
+    body=body.replace('{startTime}',paras[3])
+    body=body.replace('{endTime}',paras[4])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='querCreditSum'
+    if (rtncode==paras[5])&(int(total)==int(paras[6])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()                    
+ 
+def shakeCreditRanking(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='shakeCreditRanking'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def shakeQueryMyAssets(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='shakeQueryMyAssets'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+    
+def prefixQuery(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='prefixQuery'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def queryOrUpdateUserExtend(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{assetsVisible}',paras[2])
+    body=body.replace('{birthday}',paras[3])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryOrUpdateUserExtend'
+    if (rtncode==paras[4])&(int(total)==int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+    
+def queryActivityIsWin(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{activityId}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    keywords=response.find('Y')
+    if keywords==-1:
+        keywords='N'
+    else:
+        keywords='Y'
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+    
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryActivityIsWin'
+    
+    if (rtncode==paras[3])&(int(total)==int(paras[4]))and(str(keywords)==str(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append(str(keywords))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append(str(keywords))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()            
+
+def queryAcctPeriod(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryAcctPeriod'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()          
+ 
+def shakeLoginPassword(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{password}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='shakeLoginPassword'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def shakeRegester(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{password}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='shakeRegester'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def shakeCreditExchange(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{exchangeID}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='shakeCreditExchange'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close() 
+    
+def drawCreditExchange(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{exchangeID}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='drawCreditExchange'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def queryCreditPrize(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{provinceID}',paras[1])
+    body=body.replace('{productType}',paras[2])
+    body=body.replace('{provider}',paras[3])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryCreditPrize'
+    if (rtncode==paras[4])&(int(total)>=int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def queryCreditPrizeDetails(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{productID}',paras[1])
+ 
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryCreditPrizeDetails'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def queryExchangeList(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{product_area}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryExchangeList'
+    if (rtncode==paras[3])&(int(total)>=int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def queryRechargeList(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{provinceID}',paras[1])
+    body=body.replace('{isByChannel}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryRechargeList'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def rechargeCredit(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{productID}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='rechargeCredit'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def creditHandles(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{loginMsisdn}',paras[2])
+    body=body.replace('{credit}',paras[3])
+    body=body.replace('{content}',paras[4])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='creditHandles'
+    if (rtncode==paras[5])&(int(total)==int(paras[6])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def receiveHandlesCredit(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='receiveHandlesCredit'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+
+def receiveHandlesCredit2(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{loginMsisdn}',paras[1])
+    body=body.replace('{msisdn}',paras[2])
+    body=body.replace('{handselResult}',paras[3])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='receiveHandlesCredit2'
+    if (rtncode==paras[4])&(int(total)==int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+   
+def queryCreditHandlesInfo(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{msisdnType}',paras[2])
+    body=body.replace('{handselType}',paras[3])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryCreditHandlesInfo'
+    if (rtncode==paras[4])&(int(total)==int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+
+def queryOrderProductlist(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{status}',paras[1])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryOrderProductlist'
+    if (rtncode==paras[2])&(int(total)>=int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+
+def orderProduct(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{productID}',paras[2])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='orderProduct'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+
+def queryNmCompOrderStatus(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{productID}',paras[2])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryNmCompOrderStatus'
+    if (rtncode==paras[3])&(int(total)==int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+
+def queryBuyProductlist(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{provinceID}',paras[1])
+    body=body.replace('{status}',paras[2])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryBuyProductlist'
+    if (rtncode==paras[3])&(int(total)>=int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+
+def buyProduct(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{productID}',paras[2])
+    
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='buyProduct'
+    if (rtncode==paras[3])&(int(total)>=int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+   
+def querySelectionProducts(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{provinceID}',paras[1])
+    body=body.replace('{status}',paras[2])
+    body=body.replace('{type}',paras[3])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='querySelectionProducts'
+    if (rtncode==paras[4])&(int(total)>=int(paras[5])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()     
+
+def queryBuyProductInfo(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{productID}',paras[1])
+ 
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryBuyProductInfo'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()    
+
+def queryLikeProducts(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{status}',paras[1])
+    body=body.replace('{type}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryLikeProducts'
+    if (rtncode==paras[3])&(int(total)>=int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+
+def queryBuyHistory(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{msisdn}',paras[1])
+ 
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryBuyHistory'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+
+def queryA5AdvertList(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{ad_type}',paras[1])
+ 
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+     
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryA5AdvertList'
+    if (rtncode==paras[2])&(int(total)>=int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+
+def queryA5NewActivityList(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    #body=body.replace('{ad_type}',paras[1])
+ 
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+     
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryA5NewActivityList'
+    if (rtncode==paras[1])&(int(total)==int(paras[2])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+
+def queryA5InviteInfo(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{msisdn}',paras[1])
+ 
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+     
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryA5InviteInfo'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+ 
+def queryInviteCode(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{msisdn}',paras[1])
+ 
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+     
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryInviteCode'
+    if (rtncode==paras[2])&(int(total)==int(paras[3])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+
+def queryLikeProducts_new(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host_gd)
+    body=body.replace('{status}',paras[1])
+    body=body.replace('{type}',paras[2])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryLikeProducts_new'
+    if (rtncode==paras[3])&(int(total)>=int(paras[4])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()   
+  
+def userCreditChange(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{fMsisdn}',paras[1])
+    body=body.replace('{credit}',paras[2])
+    body=body.replace('{type}',paras[3])
+    body=body.replace('{operTypeID}',paras[4])
+    body=body.replace('{transactionID}',paras[5])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='userCreditChange'
+    if (rtncode==paras[6])&(int(total)==int(paras[7])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()
+ 
+def queryPersonCreditExchangeResult(paras):
+    global Succed_Count
+    global Failed_Count
+    filestr =open(basedir+'\\template'+'\\'+paras[0],'r').readlines()
+    body=''
+    for tmp in filestr:
+        body+=tmp;
+    client = httplib.HTTPConnection(css_host)
+    body=body.replace('{msisdn}',paras[1])
+    body=body.replace('{start_time}',paras[2])
+    body=body.replace('{end_time}',paras[3])
+    body=body.replace('{page_number}',paras[4])
+    body=body.replace('{order_type}',paras[5])
+    body=body.replace('{order_type}',paras[6])
+    body=body.replace('{current_page}',paras[7])
+    body=str(body).encode('utf8')
+    logdetail('the request is:%s'%body)
+    #print body
+    client.request("POST",ss_url,body)
+    response=client.getresponse().read()
+    logdetail('the response detail is:%s'%response)
+    #print response
+    index1=response.find('<hRet>')
+    index2=response.find('</hRet>')
+    rtncode=response[index1+6:index2]
+    indx3=response.find('<ResultTotal>')
+    indx4=response.find('</ResultTotal>')
+
+    if indx3==-1:
+        total=0
+    else:
+        total=response[indx3+13:indx4]
+    paras[0]='queryPersonCreditExchangeResult'
+    if (rtncode==paras[8])&(int(total)==int(paras[9])):
+        paras.append(rtncode)
+        paras.append(int(total))
+        Succed_Count+=1
+        paras.append('sucessful')
+
+        print str(paras).decode('raw_unicode_escape')
+                          
+        log(paras)
+        return 0
+    else:
+        paras.append(rtncode)
+        paras.append(int(total))
+        paras.append('failed')
+        #print paras
+        print str(paras).decode('raw_unicode_escape')
+        Failed_Count+=1
+        log(paras)
+        return 1
+    return 
+    client.close()  
+                                  
+def zdh():
+
+    print 'input start'
+    casefile = basedir+'\\testdata.xls'
+    xls = xlrd.open_workbook(casefile)
+    sheet = xls.sheet_by_name('Total')
+  
+
+    for li in range( 1, sheet.nrows ):
+        
+        flag = sheet.cell( li, 1 ).value
+        interface=sheet.cell( li, 0 ).value
+        index =sheet.cell( li, 2).value
+        if  flag=='Y':
+            driver(casefile,interface,index)
+            #print 'NOT RUN'  
+
+    print 'The toal case is:%d,The succed case is:%d,The failed case is:%d' %(Failed_Count+Succed_Count,Succed_Count,Failed_Count)
+     
+    return
+
+    
+if __name__ == "__main__":  
+  
+    #log file
+    starttime=time.time()
+    logfile = basedir+'\\log'+'\\log'+time.strftime('%Y%m%d%H%M%S',time.localtime(starttime))+'.txt'
+    logdetailfile = logdir+'\\logdetail'+time.strftime('%Y%m%d%H%M%S',time.localtime(starttime))+'.txt'
+
+
+    
+    #execute process
+    zdh();
+    
+    #close db conn
+
+    sys.exit()
+    
+    
